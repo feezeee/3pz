@@ -104,12 +104,35 @@
     text-decoration: none;
     color: #fff;
 }
+main{
+    width: 1440px;
+    background-color: #fff;
+    margin: auto;
+}
 
 /* О нас */
 .main__aboutUs
 {
+    margin: auto;    
+}
+.main__aboutUs h2{
+    font-family: "MontserratAlternates-Bold";
+    font-size: 48px;    
+    color: #424242;
+    text-align: center;
     margin-top: 90px;
-    
 }
 
+.aboutUs__properties{
+    margin-top: 43px;
+}
 
+.aboutUs__properties ul{
+    border: 1px solid black;
+    margin: auto;
+    align-items: center;
+}
+
+.aboutUs__properties ul li{
+    display: inline-block;
+}
