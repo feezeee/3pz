@@ -177,13 +177,25 @@ main{
     position: absolute;
 }
 .flowers__type ul li {
-    display: inline-block;
-    
-    border: 1px solid black;
+    display: inline-block;    
+    background-color: #EBEBEE;     
+    width: 385px;
+    height: 685px;    
 }
 
-.flowers__type ul li div{
-    background-color: #EBEBEE;
-    width: 385px;
-    height: 685px;
+.flower__img 
+{     
+    text-align: center;
+    margin-top: 21px;
+}
+.flower__params
+{       
+    text-align: center;
+}
+.flower__price{
+    text-align: center;
+}
+.flower__offer{
+    
+    text-align: center;
 }
