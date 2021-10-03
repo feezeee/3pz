@@ -113,26 +113,77 @@ main{
 /* О нас */
 .main__aboutUs
 {
-    margin: auto;    
+    margin: auto;
+    position: relative;   
+    margin-top: 90px; 
+    height: 346px; 
+    width: 1237px;
+    
 }
 .main__aboutUs h2{
     font-family: "MontserratAlternates-Bold";
     font-size: 48px;    
     color: #424242;
     text-align: center;
-    margin-top: 90px;
 }
 
-.aboutUs__properties{
-    margin-top: 43px;
-}
-
-.aboutUs__properties ul{
+.aboutUs__properties{    
+    
+    position: absolute;
     border: 1px solid black;
-    margin: auto;
-    align-items: center;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    
+}
+.aboutUs__properties ul{
+    border: 1px solid red;
+
+}
+.aboutUs__properties ul li{
+    display: inline-block;    
+}
+.aboutUs__properties ul li div{
+    display: inline-block;    
+    text-align: center;
+    
+}
+.aboutUs__properties ul li p{
+    font-family: "MontserratAlternates-Regular";
+    font-size: 24px;    
+    color: #424242;
 }
 
-.aboutUs__properties ul li{
+/* Виды цветов */
+.main__flowers{
+    margin-top: 90px;   
+}
+.main__flowers h2{
+    font-family: "MontserratAlternates-Bold";
+    font-size: 48px;    
+    color: #424242;
+    text-align: center;
+}
+
+.flowers__type{
+    position: relative;
+    margin: auto;
+    margin-top: 55px;
+    width: 1237px;    
+    height: 1521px;
+    border: 1px solid red;
+}
+.flowers__type ul{
+    position: absolute;
+}
+.flowers__type ul li {
     display: inline-block;
+    
+    border: 1px solid black;
+}
+
+.flowers__type ul li div{
+    background-color: #EBEBEE;
+    width: 385px;
+    height: 685px;
 }
