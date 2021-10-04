@@ -1,19 +1,19 @@
 /* Bilbo Swash Caps 400 normal */
 @font-face {
 	font-family: 'BilboSwashCaps-Regular'; 
-	src: url(/assets/fonts/BilboSwashCaps-Regular.ttf); 
+	src: url("../fonts/BilboSwashCaps-Regular.ttf"); 
 }
  
 
 /* Montserrat Alternates 700 bold */
 @font-face {
 	font-family: 'MontserratAlternates-Bold'; 
-	src: url(/assets/fonts/MontserratAlternates-Bold.ttf); 
+	src: url("../fonts/MontserratAlternates-Bold.ttf"); 
 }
 
 
 /* Montserrat Alternates 400 regular */
 @font-face {
 	font-family: 'MontserratAlternates-Regular'; 
-	src: url(/assets/fonts/MontserratAlternates-Regular.ttf); 
+	src: url("../fonts/MontserratAlternates-Regular.ttf"); 
 }
