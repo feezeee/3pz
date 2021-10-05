@@ -170,13 +170,8 @@ main{
 
 /* О нас */
 .main__aboutUs
-{
-    margin: auto;
-    position: relative;   
-    margin-top: 90px; 
-    height: 346px; 
-    width: 1237px;
-    
+{ 
+    margin-top: 90px;     
 }
 .main__aboutUs h2{
     font-family: "MontserratAlternates-Bold";
@@ -187,29 +182,34 @@ main{
 
 .aboutUs__properties{    
     
-    position: absolute;
-    border: 1px solid black;
-    bottom: 0px;
-    right: 0px;
-    left: 0px;
+    width: 1237px; 
+    margin: auto;
+    margin-top: 55px;
     
 }
 .aboutUs__properties ul{
-    border: 1px solid red;
-
+    display: flex;
+    justify-content:space-between;
 }
 .aboutUs__properties ul li{
-    display: inline-block;    
+    text-align: center;  
 }
 .aboutUs__properties ul li div{
     display: inline-block;    
     text-align: center;
     
 }
+.aboutUs__properties ul li div img{
+    width: 190px;
+    height: 190px;    
+}
+
 .aboutUs__properties ul li p{
     font-family: "MontserratAlternates-Regular";
     font-size: 24px;    
     color: #424242;
+    margin-top: 30px;
+    line-height: 29px;
 }
 
 /* Виды цветов */
@@ -283,6 +283,7 @@ main{
 .main__paidAndTransfer
 {
     margin-top: 90px;
+    
 }
 
 .main__paidAndTransfer h2{
@@ -293,14 +294,35 @@ main{
 }
 
 .paidAndTransfer__property{
-    position: relative;
+    
+    width: 1237px; 
     margin: auto;
     margin-top: 55px;
-    width: 1237px;    
-    height: 1521px;
-    border: 1px solid red;
+}
+.paidAndTransfer__property ul{
+    display: flex;
+    justify-content:space-between;
 }
 
-.paidAndTransfer__property ul li{
-    display: inline-block;
+.paidAndTransfer__property ul li{    
+    width: 318px;
+    text-align: center;
+}
+.paidAndTransfer__property ul li div img{
+    width: 190px;
+    height: 190px;
+}
+
+.property__h{
+    font-family: "MontserratAlternates-Bold";
+    font-size: 38px;    
+    color: #424242;
+}
+
+.property__inf{
+    margin-top: 30px;
+    font-family: "MontserratAlternates-Regular";
+    font-size: 24px;    
+    color: #000000;
+    line-height: 29px;
 }
