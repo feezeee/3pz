@@ -326,3 +326,297 @@ main{
     color: #000000;
     line-height: 29px;
 }
+
+/* Отзывы */
+
+.main__feedback{
+    margin-top: 90px;
+}
+
+.main__feedback h2{
+    font-family: "MontserratAlternates-Bold";
+    font-size: 48px;    
+    color: #424242;
+    text-align: center;
+}
+
+.feedback__inf{
+    margin: auto;
+    margin-top: 55px;
+    width: 1176px;
+    display: flex;
+    justify-content:space-between;
+}
+.inf__users{
+    
+    width: 994px;
+    height: 549px;
+    background-color: #EBEBEE;
+    position: relative;
+    display: flex;
+    justify-content:space-between;
+}
+
+
+.__person
+{
+    position: absolute;  
+    left: 153px;
+    top: 26px;
+    z-index: 2;
+}
+
+.__product
+{
+    z-index: 1;
+    background-color: #ffffff;
+    position: absolute;
+    height: 411px;
+    width: 385px;
+    top: 112px;
+    left: 48px;
+    box-shadow: 0px 4px 4px rgba(85, 104, 103, 0.25);
+}
+
+.__inf{
+    margin-top: 113px;
+}
+
+.firstLastName{
+    font-family: "MontserratAlternates-Bold";
+    font-size: 28px;    
+    color: #424242;
+    text-align: center;
+    line-height: 34px;
+}
+
+.textOfPerson{
+    font-family: "MontserratAlternates-Regular";
+    font-size: 28px;    
+    color: #424242;  
+    text-align: center;  
+    line-height: 34px;
+    margin-top: 34px;
+}
+.productPerson{
+    width: 507px;
+    height: 497px;
+    margin-right: 31px;  
+    margin-top: 26px;
+    margin-bottom: 26px;
+    filter: drop-shadow(0px 4px 4px rgba(85, 104, 103, 0.25));
+}
+
+/* Кнопка влево */
+.inf__left
+{   
+    display: table;
+}
+#swipeToLeft
+{
+    width: 31px;
+    height: 62px;
+}
+
+.inf__table-cell
+{
+    display: table-cell; 
+    vertical-align	: middle;
+}
+/* Кнопка вправо */
+.inf__right
+{
+    
+    display: table;
+}
+#swipeToRight{
+    width: 31px;
+    height: 62px;
+}
+
+/* Оформить заказ */
+
+.main__order{
+    margin-top: 90px;
+}
+.main__order h2{
+    font-family: "MontserratAlternates-Bold";
+    font-size: 48px;    
+    color: #424242;
+    text-align: center;
+}
+.order__param{
+    margin: auto;
+    margin-top: 55px;
+    width: 1058px;
+}
+
+#order__firstName{
+    width: 100%;
+    border: 0px;
+    border-bottom: 1px solid #000000;
+    font-family: "MontserratAlternates-Regular";
+    font-size: 36px;    
+    color: #000000; 
+    text-transform: capitalize;  
+}
+#order__firstName::placeholder{
+    font-family: "MontserratAlternates-Regular";
+    font-size: 36px;    
+    color: #000000;
+    opacity: 0.5;
+}
+#order__firstName:focus::-webkit-input-placeholder {
+    color: transparent
+  }
+  
+#order__firstName:focus::-moz-placeholder {
+    color: transparent
+  }
+  
+#order__firstName:focus:-moz-placeholder {
+    color: transparent
+  }
+  
+#order__firstName:focus:-ms-input-placeholder {
+    color: transparent
+}
+
+
+#order__lastName{
+    margin-top: 93px;
+    width: 100%;
+    border: 0px;
+    border-bottom: 1px solid #000000;
+    font-family: "MontserratAlternates-Regular";
+    font-size: 36px;    
+    color: #000000;
+    text-transform: capitalize; 
+}
+#order__lastName::placeholder{
+    font-family: "MontserratAlternates-Regular";
+    font-size: 36px;    
+    color: #000000;
+    opacity: 0.5;
+}
+#order__lastName:focus::-webkit-input-placeholder {
+    color: transparent
+  }
+  
+#order__lastName:focus::-moz-placeholder {
+    color: transparent
+  }
+  
+#order__lastName:focus:-moz-placeholder {
+    color: transparent
+  }
+  
+#order__lastName:focus:-ms-input-placeholder {
+    color: transparent
+}
+
+#order__phoneNumber{
+    margin-top: 93px;
+    width: 100%;
+    border: 0px;
+    border-bottom: 1px solid #000000;
+    font-family: "MontserratAlternates-Regular";
+    font-size: 36px;    
+    color: #000000;
+}
+#order__phoneNumber::placeholder{
+    font-family: "MontserratAlternates-Regular";
+    font-size: 36px;    
+    color: #000000;
+    opacity: 0.5;
+}
+/* Доп параметры уточнения */
+.param__flower{
+    margin-top: 93px;
+}
+.param__flower h3{
+    margin-top: 93px;
+    font-family: "MontserratAlternates-Regular";
+    font-size: 36px;    
+    color: #000000;
+}
+.param__flower ul{    
+    margin-left: 21px;
+    margin-top: 19px;
+}
+.param__flower ul li{
+    width: 49%;
+    display: inline-block;
+}
+
+input[type=checkbox]{
+    position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+input[type=checkbox] + label
+{
+    user-select: none;
+}
+
+input[type=checkbox]+label::before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 4px;
+    width: 34px;
+    height: 34px;
+    border: 1px solid #adb5bd;
+    margin-right: 32px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+  }
+
+  input[type=checkbox]:checked+label::before {
+    
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAE/UlEQVR4Xu2dTchXRRSHH0EjBcVsU2AgEUSZGUEUhhqIixalYOoixRRLePMDWpi5bWHtNDPNMEpEUBRTlyqmiAiVX5nRqshFuIoMIdQoDt5XfV/v3M8zc+fee2bzX/xnzpw5z71z7u/OZWYEVkJGYB8wL+lwKzAwImTvPe/rK2DJsBjsNQBhror5wN60rgyAfwCPApeB8QbAf7DTejgKzHJ0vd3uAL9Q1gAbHV1cAZ4xAP4APAlcBB5I6eI/YBpwxgD4ATASOAtMcZj/GFgn/xkAPwAkwGsdpn8EngduGQA/wX8JOO24uG8AzwK/DHZtd4AuhHHAJeAxh1lJyp/c+58B0AWwE1jsMHkCeGX4fwZAD8BrwCGHuT+BycAfBkAv4PdaErX7E/CQw/zrwGFTwn6CL1a/BWY6zMu0NPwl3J2qNgXVh5KrdoFrrm4MQD0AhdRuVhcGoDqAwmrXAFQPclbLwmrXAOgDKKV2DYAugNJq1wDoAiitdg2AHoBKatcA6ACorHYNgA6AymrXANQHUEvtGoB6AGqrXQNQHYCK2jUA1QGoqF0DUA2Amto1AOUBqKpdA1AegKraNQDlAKirXQNQHIAXtWsAigPwonYNQDEA3tSuAcgH4FXtGoBsAN7VrgHIBuBd7RoAdwSCqF0DkB6BYGrXAKRHIJjaNQD3RyCo2jUAQyMQXO0agKERCK52DcDdCDSidg3A7Qg0pnYNADSqdg0ANKp2+w6gcbXbZwBRqN0+A4hC7fYVQDRqt48AolK7fQQQldrtG4Do1G6fAESpdvsCIFq12xcA0ardPgCIWu12HUD0arfrAKJXu10G0Aq121UArVG7XQXQGrVbFMDDwETgQlaDSP5bDWxy+CJ7MssGeX9H4mumG7Jh0xjgc2BRUlN2+54dsfNPJdvBu1ycDpyK2P8hrgmAA8DcYQ5/CqyKdBDngOccvm0A1kfqd6pbAkB28k4rbwD7IxvMR8D7Dp9kx1rXZtmRDeOuO1kAZA6dCvwaifcytZx0+PJPclfc2ZM5Ep9z3RAAspexa7qRhOy63XONK1YYm8z78pCQViQpb1bsL5gpATAK+C652tM6/gx4N5hH6R21Wu1mxW5w28pJyWkPcqWlFUnSBxuC0Hq1WwSA1JkDfOOoLPlA9r3/LTCETqjdogCk3jZghaOB5IMXgJsBIXRC7ZYB8CDwA/C0o9EWYGUgAK1a260ak7Sti59IXkeIQm4qH7RubVcTgNhaAOxpKB+0cm1XG4DY2w683UA+aOXarg8AefnAx/ui1q7t+gAgNkPmg1av7foCEDIfdFbtlnkMddX9AljuMR90Wu1qAMjLB/IiTF6IVSmdV7saAHzmg86rXS0APvJBL9SuJgCxtQNYppAPeqN2tQFIPvg++fIgzfZWYCAnGcj56rK65VpClKXHD6oklLa1qXqMVZ4++BJ4B/g3JSCPA0cA+U0rQ87bbVtAy/pbFYD08yawK6PDY8DXwPlkXfll4NXktNEJjnaytiuHHf9cdiBtrV8HgIxZrvSlioO/77xdRdtRmqoLYDRwHHhRYXS7k7tKwVR7TNQFICOVhCpfosnngFXLGWBG4NW2qr6qttMAIA7JnC75QOb4smUf8BZwvWzDLtTXAjAYi/eAD5PvTfPiI0e8rgPksbW3RRuABFI+bZFz1Rcmh9s/Akiu+Au4CvyePB1lPUH1Bsj/qKYpvtREtWsAAAAASUVORK5CYII=");
+  }
+
+.param__flower ul li label{
+    width: 34px;
+    height: 34px;
+    font-family: "MontserratAlternates-Regular";
+    font-size: 24px;    
+    color: #000000;  
+    line-height: 29px;
+}
+
+
+.param__decoration{
+    margin-top: 93px;
+}
+.param__decoration h3{
+    margin-top: 93px;
+    font-family: "MontserratAlternates-Regular";
+    font-size: 36px;    
+    color: #000000;
+}
+
+.param__adding{
+    margin-top: 93px;
+}
+.param__adding h3{
+    margin-top: 93px;
+    font-family: "MontserratAlternates-Regular";
+    font-size: 36px;    
+    color: #000000;
+}
+
+.param__transfer{
+    margin-top: 93px;
+}
+.param__transfer h3{
+    margin-top: 93px;
+    font-family: "MontserratAlternates-Regular";
+    font-size: 36px;    
+    color: #000000;
+}

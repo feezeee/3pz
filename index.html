@@ -91,8 +91,8 @@
               <li>
                 <div>
                   <div class="flower__img">
-                  <img src="assets/img/sale/Tenderness_335.png" alt="" />
-                </div>
+                    <img src="assets/img/sale/Tenderness_335.png" alt="" />
+                  </div>
                   <p class="flower__params">Букет<br />"Ласка"</p>
                   <p class="flower__price">150 BYN</p>
                   <div class="flower__offer">
@@ -103,8 +103,8 @@
               <li>
                 <div>
                   <div class="flower__img">
-                  <img src="assets/img/sale/Love_335.png" alt="" />
-                </div>
+                    <img src="assets/img/sale/Love_335.png" alt="" />
+                  </div>
                   <p class="flower__params">Букет<br />"Любовь"</p>
                   <p class="flower__price">200 BYN</p>
                   <div class="flower__offer">
@@ -115,7 +115,7 @@
               <li>
                 <div>
                   <div class="flower__img">
-                  <img src="assets/img/sale/Original_335.png" alt="" />
+                    <img src="assets/img/sale/Original_335.png" alt="" />
                   </div>
                   <p class="flower__params">Букет<br />"Оригинальный"</p>
                   <p class="flower__price">120 BYN</p>
@@ -127,7 +127,7 @@
               <li>
                 <div>
                   <div class="flower__img">
-                  <img src="assets/img/sale/Smile_335.png" alt="" />
+                    <img src="assets/img/sale/Smile_335.png" alt="" />
                   </div>
                   <p class="flower__params">Букет<br />"Улыбка"</p>
                   <p class="flower__price">140 BYN</p>
@@ -158,41 +158,149 @@
             <ul>
               <li>
                 <div>
-                  <img src="assets/img/paidAndTransfer/first.svg" alt="">
-                  <p class="property__h">
-                    Оплата
-                  </p>
+                  <img src="assets/img/paidAndTransfer/first.svg" alt="" />
+                  <p class="property__h">Оплата</p>
                   <p class="property__inf">
                     Оплатить заказ можно при получении либо в пункте самовывоза
                   </p>
                 </div>
               </li>
-              <li> 
+              <li>
                 <div>
-                <img src="assets/img/paidAndTransfer/second.svg" alt="">
-                <p class="property__h">
-                  Доставка
-                </p>
-                <p class="property__inf">
-                  Доставим в любую точку Минска в течение дня
-                </p>
-
-              </div>
+                  <img src="assets/img/paidAndTransfer/second.svg" alt="" />
+                  <p class="property__h">Доставка</p>
+                  <p class="property__inf">
+                    Доставим в любую точку Минска в течение дня
+                  </p>
+                </div>
               </li>
               <li>
                 <div>
-                  <img src="assets/img/paidAndTransfer/third.svg" alt="">
-                  <p class="property__h">
-                    Самовывоз
-                  </p>
+                  <img src="assets/img/paidAndTransfer/third.svg" alt="" />
+                  <p class="property__h">Самовывоз</p>
                   <p class="property__inf">
-                    Вы можете забрать букет самостоятельно по адресу г. Минск, ул. Белая 1
-                  </p>  
+                    Вы можете забрать букет самостоятельно по адресу г. Минск,
+                    ул. Белая 1
+                  </p>
                 </div>
               </li>
             </ul>
           </div>
         </div>
+        <div class="main__feedback">
+          <h2>Отзывы</h2>
+          <div class="feedback__inf">
+            <div class="inf__left">
+              <div class="inf__table-cell">
+                <img
+                  id="swipeToLeft"
+                  src="assets/img/feedback/left.svg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="inf__users">
+              <div class="__person">
+                <img src="assets/img/feedback/person1/person.png" alt="" />
+              </div>
+              <div class="infFromPerson">
+                <div class="__product">
+                  <div class="__inf">
+                    <p class="firstLastName">Анастасия<br />Иванова</p>
+                    <p class="textOfPerson">
+                      Спасибо за чудесный букет! Все пришло вовремя)
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <img
+                class="productPerson"
+                src="assets/img/feedback/person1/product.svg"
+                alt=""
+              />
+            </div>
+            <div class="inf__right">
+              <div class="inf__table-cell">
+                <img
+                  id="swipeToRight"
+                  src="assets/img/feedback/right.svg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Подключение библиотеки jQuery -->
+        <script src="assets/js/jquery.js"></script>
+        <!-- Подключение jQuery плагина Masked Input -->
+        <script src="assets/js/jquery.maskedinput.min.js"></script>
+        <div class="main__order">
+          <h2>Оформить заказ</h2>
+          <div class="order__param">
+            <input
+              id="order__firstName"
+              name="order__firstName"
+              type="text"
+              placeholder="Имя*"
+            />
+            <input
+              id="order__lastName"
+              name="order__lastName"
+              type="text"
+              placeholder="Фамилия*"
+            />
+            <input
+              id="order__phoneNumber"
+              name="order__phoneNumber"
+              type="tel"
+              placeholder="Телефон*"
+            />
+            <script>
+              //Код jQuery, установливающий маску для ввода телефона элементу input
+              //1. После загрузки страницы,  когда все элементы будут доступны выполнить...
+              $(function () {
+                //2. Получить элемент, к которому необходимо добавить маску
+                $("#order__phoneNumber").mask("+375(99) 999-99-99");
+              });
+            </script> 
+            <div class="param__flower">
+              <h3>Букет*</hз>
+                <ul>
+                  <li>                    
+                      <input type="checkbox" id="flower__scales1" name="flower__scales1">
+                      <label for="flower__scales1">Нежность  100 BYN</label>                    
+                  </li>
+                  <li>
+                    <input type="checkbox" id="flower__scales2" name="flower__scales2">
+                    <label for="flower__scales2">Ласка 150 BYN</label></li>
+                  <li>
+                    <input type="checkbox" id="flower__scales3" name="flower__scales3">
+                    <label for="flower__scales3">Любовь 200 BYN</label></li>
+                  <li><input type="checkbox" 
+                    id="flower__scales4" name="flower__scales4">
+    <label for="flower__scales4">Оригинальный 120 BYN</label></li>
+                  <li><input type="checkbox" 
+                    id="flower__scales5" name="flower__scales5">
+    <label for="flower__scales5">Улыбка 140 BYN</label></li>
+                  <li><input type="checkbox" 
+                    id="flower__scales6" name="flower__scales6">
+    <label for="flower__scales6">Поцелуй 210 BYN</label></li>
+    
+                  
+                </ul>
+            </div>    
+            <div class="param__decoration">
+              <h3>Букет оформить в*</h3>
+            </div>    
+            <div class="param__adding">
+              <h3>К букету добавить</h3>
+            </div>    
+            <div class="param__transfer">
+              <h3>Доставка*</h3>
+            </div>            
+          </div>
+        </div>
+        <br /><br /><br /><br /><br /><br /><br /><br />
       </main>
     </div>
   </body>
