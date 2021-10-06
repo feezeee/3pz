@@ -267,23 +267,23 @@
               <h3>Букет*</hз>
                 <ul>
                   <li>                    
-                      <input type="checkbox" id="flower__scales1" name="flower__scales1">
+                      <input type="checkbox" id="flower__scales1" name="flower__scales">
                       <label for="flower__scales1">Нежность  100 BYN</label>                    
                   </li>
                   <li>
-                    <input type="checkbox" id="flower__scales2" name="flower__scales2">
+                    <input type="checkbox" id="flower__scales2" name="flower__scales">
                     <label for="flower__scales2">Ласка 150 BYN</label></li>
                   <li>
-                    <input type="checkbox" id="flower__scales3" name="flower__scales3">
+                    <input type="checkbox" id="flower__scales3" name="flower__scales">
                     <label for="flower__scales3">Любовь 200 BYN</label></li>
                   <li><input type="checkbox" 
-                    id="flower__scales4" name="flower__scales4">
+                    id="flower__scales4" name="flower__scales">
     <label for="flower__scales4">Оригинальный 120 BYN</label></li>
                   <li><input type="checkbox" 
-                    id="flower__scales5" name="flower__scales5">
+                    id="flower__scales5" name="flower__scales">
     <label for="flower__scales5">Улыбка 140 BYN</label></li>
                   <li><input type="checkbox" 
-                    id="flower__scales6" name="flower__scales6">
+                    id="flower__scales6" name="flower__scales">
     <label for="flower__scales6">Поцелуй 210 BYN</label></li>
     
                   
@@ -291,16 +291,94 @@
             </div>    
             <div class="param__decoration">
               <h3>Букет оформить в*</h3>
+
+              <ul>
+                <li>                    
+                    <input type="radio" id="flower__decoration1" name="flower__decoration">
+                    <label for="flower__decoration1">Коробку ( +2 BYN)</label>                    
+                </li>
+                <li>
+                  <input type="radio" id="flower__decoration2" name="flower__decoration">
+                  <label for="flower__decoration2">Флористическую бумагу</label></li> 
+                                
+              </ul>
+
             </div>    
             <div class="param__adding">
               <h3>К букету добавить</h3>
+              <ul>
+                <li>                    
+                  <input type="checkbox" id="flower__adding1" name="flower__adding">
+                  <label for="flower__adding1">Открытку ( +1 BYN)</label>                    
+                </li>
+                <li>
+                  <input type="checkbox" id="flower__adding2" name="flower__scales">
+                  <label for="flower__adding2">Шоколадку ( +3 BYN)</label></li>
+                <li>          
+              </ul>
             </div>    
             <div class="param__transfer">
-              <h3>Доставка*</h3>
-            </div>            
+              <h3>Доставка*</h3>             
+              <ul>
+                <li>                    
+                    <input type="radio" id="flower__transfer1" name="flower__transfer">
+                    <label for="flower__transfer1">Курьером ( +10 BYN)</label>                    
+                </li>
+                <li>
+                  <input type="radio" id="flower__transfer2" name="flower__transfer">
+                  <label for="flower__transfer2">Самовывоз</label></li> 
+                                
+              </ul>
+            </div> 
+            
+            
+            <div class="param__transferDateTime">
+              <div class="__date">
+                <h3>Дата доставки*</h3>          
+                <input type="date" id="dateTransfer" >
+                <script>
+                  let element = document.getElementById('dateTransfer');
+                  var today = new Date();
+                    var dd = today.getDate();
+                    var mm = today.getMonth() + 1; // Месяца идут с 0, так что добавляем 1.
+                    var yyyy = today.getFullYear();                    
+                    var ddmin = dd;
+                    var ddmax = dd + 20;
+
+                    if(ddmin < 10){
+                      ddmin ='0' + ddmin
+                    } 
+                    if(mm < 10){
+                      mm='0' + mm
+                    } 
+                    min = yyyy + '-' + mm + '-' + ddmin;
+                    max = yyyy + '-' + mm + '-' + ddmax;
+                    element.setAttribute("min", min);
+                    element.setAttribute("value", min);
+                    element.setAttribute("max", max);
+                </script>              
+              </div>
+              
+              <div class="__time">
+                <h3>Время доставки*</h3>             
+                <select id="timeTransfer">
+                  <option id="1">9:00-12:00</option>
+                  <option id="2">12:00-15:00</option>
+                  <option id="3">15:00-18:00</option>
+                  <option id="4">18:00-21:00</option>
+                  <option id="5">21:00-00:00</option>
+                </select>    
+                <script src="assets/js/timeTransfer.js"></script>                 
+              </div>
+            </div>    
           </div>
         </div>
         <br /><br /><br /><br /><br /><br /><br /><br />
+
+        <br /><br /><br /><br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br /><br /><br /><br />
+
       </main>
     </div>
   </body>

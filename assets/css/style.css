@@ -549,7 +549,14 @@ main{
     display: inline-block;
 }
 
-input[type=checkbox]{
+.param__flower ul li label{
+    font-family: "MontserratAlternates-Regular";
+    font-size: 24px;    
+    color: #000000;  
+    line-height: 29px;
+}
+
+input[type=checkbox], input[type=radio]{
     position: absolute;
   z-index: -1;
   opacity: 0;
@@ -557,23 +564,24 @@ input[type=checkbox]{
 
 input[type=checkbox] + label
 {
+    display: inline-flex;
+    align-items: center;
     user-select: none;
 }
 
 input[type=checkbox]+label::before {
     content: '';
     display: inline-block;
-    vertical-align: middle;
-    margin-bottom: 4px;
     width: 34px;
-    height: 34px;
-    border: 1px solid #adb5bd;
-    margin-right: 32px;
+    height: 34px;    
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #000000;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 50% 50%;
-    border: 1px solid #000000;
-    box-sizing: border-box;
+    box-sizing: border-box;    
+    margin-right: 32px;
   }
 
   input[type=checkbox]:checked+label::before {
@@ -581,14 +589,49 @@ input[type=checkbox]+label::before {
     background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAE/UlEQVR4Xu2dTchXRRSHH0EjBcVsU2AgEUSZGUEUhhqIixalYOoixRRLePMDWpi5bWHtNDPNMEpEUBRTlyqmiAiVX5nRqshFuIoMIdQoDt5XfV/v3M8zc+fee2bzX/xnzpw5z71z7u/OZWYEVkJGYB8wL+lwKzAwImTvPe/rK2DJsBjsNQBhror5wN60rgyAfwCPApeB8QbAf7DTejgKzHJ0vd3uAL9Q1gAbHV1cAZ4xAP4APAlcBB5I6eI/YBpwxgD4ATASOAtMcZj/GFgn/xkAPwAkwGsdpn8EngduGQA/wX8JOO24uG8AzwK/DHZtd4AuhHHAJeAxh1lJyp/c+58B0AWwE1jsMHkCeGX4fwZAD8BrwCGHuT+BycAfBkAv4PdaErX7E/CQw/zrwGFTwn6CL1a/BWY6zMu0NPwl3J2qNgXVh5KrdoFrrm4MQD0AhdRuVhcGoDqAwmrXAFQPclbLwmrXAOgDKKV2DYAugNJq1wDoAiitdg2AHoBKatcA6ACorHYNgA6AymrXANQHUEvtGoB6AGqrXQNQHYCK2jUA1QGoqF0DUA2Amto1AOUBqKpdA1AegKraNQDlAKirXQNQHIAXtWsAigPwonYNQDEA3tSuAcgH4FXtGoBsAN7VrgHIBuBd7RoAdwSCqF0DkB6BYGrXAKRHIJjaNQD3RyCo2jUAQyMQXO0agKERCK52DcDdCDSidg3A7Qg0pnYNADSqdg0ANKp2+w6gcbXbZwBRqN0+A4hC7fYVQDRqt48AolK7fQQQldrtG4Do1G6fAESpdvsCIFq12xcA0ardPgCIWu12HUD0arfrAKJXu10G0Aq121UArVG7XQXQGrVbFMDDwETgQlaDSP5bDWxy+CJ7MssGeX9H4mumG7Jh0xjgc2BRUlN2+54dsfNPJdvBu1ycDpyK2P8hrgmAA8DcYQ5/CqyKdBDngOccvm0A1kfqd6pbAkB28k4rbwD7IxvMR8D7Dp9kx1rXZtmRDeOuO1kAZA6dCvwaifcytZx0+PJPclfc2ZM5Ep9z3RAAspexa7qRhOy63XONK1YYm8z78pCQViQpb1bsL5gpATAK+C652tM6/gx4N5hH6R21Wu1mxW5w28pJyWkPcqWlFUnSBxuC0Hq1WwSA1JkDfOOoLPlA9r3/LTCETqjdogCk3jZghaOB5IMXgJsBIXRC7ZYB8CDwA/C0o9EWYGUgAK1a260ak7Sti59IXkeIQm4qH7RubVcTgNhaAOxpKB+0cm1XG4DY2w683UA+aOXarg8AefnAx/ui1q7t+gAgNkPmg1av7foCEDIfdFbtlnkMddX9AljuMR90Wu1qAMjLB/IiTF6IVSmdV7saAHzmg86rXS0APvJBL9SuJgCxtQNYppAPeqN2tQFIPvg++fIgzfZWYCAnGcj56rK65VpClKXHD6oklLa1qXqMVZ4++BJ4B/g3JSCPA0cA+U0rQ87bbVtAy/pbFYD08yawK6PDY8DXwPlkXfll4NXktNEJjnaytiuHHf9cdiBtrV8HgIxZrvSlioO/77xdRdtRmqoLYDRwHHhRYXS7k7tKwVR7TNQFICOVhCpfosnngFXLGWBG4NW2qr6qttMAIA7JnC75QOb4smUf8BZwvWzDLtTXAjAYi/eAD5PvTfPiI0e8rgPksbW3RRuABFI+bZFz1Rcmh9s/Akiu+Au4CvyePB1lPUH1Bsj/qKYpvtREtWsAAAAASUVORK5CYII=");
   }
 
-.param__flower ul li label{
+
+
+  input[type=radio] + label{
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+}
+
+input[type=radio]+label::before {
+    content: '';
+    display: inline-block;
     width: 34px;
     height: 34px;
-    font-family: "MontserratAlternates-Regular";
-    font-size: 24px;    
-    color: #000000;  
-    line-height: 29px;
-}
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #000000;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;    
+    margin-right: 29px;
+  }
+
+  input[type=radio]:not(:disabled):not(:checked)+label:hover::before {
+    border-color: #b3d7ff;
+  }
+
+  /* стили для радиокнопки, находящейся в фокусе и не находящейся в состоянии checked */
+  input[type=radio]:focus:not(:checked)+label::before {
+    border-color: #2c2c2c;
+  }
+
+  /* стили для радиокнопки, находящейся в состоянии checked */
+  input[type=radio]:checked+label::before {
+    border-color: black;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='8' height='8' viewBox='-4' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='4' cy='4' r='4' fill='black'/%3e%3c/svg%3e");
+  }
+
+  /* стили для радиокнопки, находящейся в состоянии disabled */
+  input[type=radio]:disabled+label::before {
+    background-color: #e9ecef;
+  }
+
 
 
 .param__decoration{
@@ -599,6 +642,20 @@ input[type=checkbox]+label::before {
     font-family: "MontserratAlternates-Regular";
     font-size: 36px;    
     color: #000000;
+}
+.param__decoration ul{    
+    margin-left: 21px;
+    margin-top: 21px;
+}
+.param__decoration ul li{
+    width: 49%;
+    display: inline-block;
+}
+.param__decoration ul li label{
+    font-family: "MontserratAlternates-Regular";
+    font-size: 24px;    
+    color: #000000;  
+    line-height: 29px;
 }
 
 .param__adding{
@@ -611,11 +668,106 @@ input[type=checkbox]+label::before {
     color: #000000;
 }
 
+.param__adding ul{    
+    margin-left: 21px;
+    margin-top: 21px;
+}
+.param__adding ul li{
+    width: 49%;
+    display: inline-block;
+}
+.param__adding ul li label{
+    font-family: "MontserratAlternates-Regular";
+    font-size: 24px;    
+    color: #000000;  
+    line-height: 29px;
+}
+
+
 .param__transfer{
     margin-top: 93px;
 }
 .param__transfer h3{
     margin-top: 93px;
+    font-family: "MontserratAlternates-Regular";
+    font-size: 36px;    
+    color: #000000;
+}
+
+.param__transfer ul{    
+    margin-left: 21px;
+    margin-top: 21px;
+}
+.param__transfer ul li{
+    width: 49%;
+    display: inline-block;
+}
+.param__transfer ul li label{
+    font-family: "MontserratAlternates-Regular";
+    font-size: 24px;    
+    color: #000000;  
+    line-height: 29px;
+}
+
+.param__transferDateTime
+{
+    margin-top: 95px;
+}
+.__date
+{
+    width: 50%;
+    display: inline-block;
+}
+.__date h3
+{
+    margin-top: 93px;
+    font-family: "MontserratAlternates-Regular";
+    font-size: 36px;    
+    color: #000000;
+}
+
+.__time
+{
+    width: 48%;
+    display: inline-block;
+}
+.__time h3
+{
+    margin-top: 93px;
+    font-family: "MontserratAlternates-Regular";
+    font-size: 36px;    
+    color: #000000;
+}
+
+
+
+#dateTransfer{
+    border: 0px;
+    border-bottom: 1px solid #000000;
+    width: 286px;
+    margin-top: 20px;
+    font-family: "MontserratAlternates-Regular";
+    font-size: 36px;    
+    color: #000000;
+    padding-right: 30px;
+    padding-left: 21px;
+    
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+    color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    display: block;
+    background-image: url("../img/Calendar.png"); 
+       
+    width: 48px;
+    height: 48px;
+}
+
+#timeTransfer{
+    border: 0px;
+    border-bottom: 1px solid #000000;
+    width: 343px;
+    margin-top: 20px;
     font-family: "MontserratAlternates-Regular";
     font-size: 36px;    
     color: #000000;
