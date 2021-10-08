@@ -236,6 +236,7 @@
         <script src="assets/js/jquery.maskedinput.min.js"></script>
         <div class="main__order">
           <h2>Оформить заказ</h2>
+          <form action="">
           <div class="order__param">
             <input
               id="order__firstName"
@@ -371,7 +372,94 @@
                 <script src="assets/js/timeTransfer.js"></script>                 
               </div>
             </div>    
+
+            <div class="param__addressTransfer">
+              <input
+              id="addressTransfer"
+              name="addressTransfer"
+              type="text"
+              placeholder="Адрес доставки*"
+              />
+            </div> 
+            <div class="param__coment">
+              <textarea id="coment" name="coment" placeholder="Комментарий к заказу"></textarea>
+              
+            </div> 
+
+            <div class="param__text">
+                <p>
+                  * обязательно для заполнения
+                </p>
+            </div>
+            <div class="param__result">
+              <p>
+                0
+              </p>
           </div>
+          <div class="param__button">
+            <input id="order" name="order" type="submit" value="Заказать"/>
+            <input id="clear" id="clear" type="button" value="Очистить"/>
+          </div>
+        </form>
+        </div>
+        <div class="location">
+          <img src="assets/img/location/Map.png" alt="">
+          <div class="location__additionalParam">
+            <p class="location__address">
+              г. Минск, ул. Белая 1
+            </p>
+            <p class="location__companyNumber">
+              +375 (29) 123-45-67
+            </p>
+            <div class="location__messengers">
+              <ul>
+                <li>
+                  <div class="location__viber">
+                    <img src="assets/img/location/inf/viber.png" alt="">
+                  </div>
+                </li>
+                <li>
+                  <div class="location__telegram">
+                    <img src="assets/img/location/inf/Telegram.png" alt="">
+                  </div>
+                </li>
+                <li>
+                  <div class="location__whatsApp">
+                    <img src="assets/img/location/inf/WhatsApp.png" alt="">
+                  </div>
+                </li>         
+                <li>
+                  <div class="location__instagram">
+                    <img src="assets/img/location/inf/Instagram.png" alt="">
+                  </div>
+                </li>   
+                <li>
+                  <div class="location__facebook">
+                    <img src="assets/img/location/inf/Facebook.png" alt="">
+                  </div>
+                </li> 
+                <li>
+                  <div class="location__vk">
+                    <img src="assets/img/location/inf/Vk.png" alt="">
+                  </div>
+                </li>    
+              </ul>
+            
+          
+            </div>
+            <button class="location__orderCall">
+              Заказать звонок
+            </button>
+            </div>
+            <img class="location__geotag" src="assets/img/location/geotag.png" alt="">
+            <img class="location__geotagShadow" src="assets/img/location/shadow.png" alt="">
+            
+              <img class="backToTop" src="assets/img/location/arrowtop.png" alt="">
+                   
+          </div>
+          <footer>
+            
+          </footer>
         </div>
         <br /><br /><br /><br /><br /><br /><br /><br />
 
