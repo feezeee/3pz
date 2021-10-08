@@ -154,6 +154,7 @@ border-spacing: 0;
     border-radius: 20px;
     display: flex;
     
+    
 }
 .chooseFlowersBtn a{   
     margin: auto;
@@ -223,22 +224,23 @@ main{
     text-align: center;
 }
 
-.flowers__type{
-    position: relative;
+.flowers__type{ 
     margin: auto;
     margin-top: 55px;
-    width: 1237px;    
-    height: 1521px;
-    border: 1px solid red;
+    width: 1237px;   
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: space-between;  
+    row-gap:37px;  
 }
-.flowers__type ul{
-    position: absolute;
-}
-.flowers__type ul li {
-    display: inline-block;    
-    background-color: #EBEBEE;     
+
+.flowers__type li
+{    
+    background: #EBEBEE;
+    border-radius: 2px;    
     width: 385px;
-    height: 685px;    
+    height: 685px;
 }
 
 .flower__img 
@@ -270,6 +272,9 @@ main{
     margin-top: 29px; 
     display: flex; 
     justify-content: center;
+    background: #556867;
+    box-shadow: 0px 4px 4px rgba(43, 0, 0, 0.25);
+    border-radius: 20px;
 }
 .flower__offer a{
     font-family: "MontserratAlternates-Bold";
@@ -277,13 +282,13 @@ main{
     text-decoration: none;
     color: #fff;
     margin: auto;
+
 }
 
 /* Оплата и доставка */
 .main__paidAndTransfer
 {
-    margin-top: 90px;
-    
+    margin-top: 90px;    
 }
 
 .main__paidAndTransfer h2{
@@ -558,8 +563,8 @@ main{
 
 input[type=checkbox], input[type=radio]{
     position: absolute;
-  z-index: -1;
-  opacity: 0;
+    z-index: -1;
+    /* opacity: 0; */
 }
 
 input[type=checkbox] + label
@@ -869,6 +874,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     width: 100%;
     position: relative;
 }
+.location__map{
+    width: 100%;
+    height: 772px;
+    position: relative;
+}
 .location__additionalParam{
     position: absolute;
     right: 0;
@@ -890,7 +900,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     display: inline-block;
     width: 28px;
     height: 36px;
-    background-image: url(../img/location/inf/Geoloc.png);  
+    background-image: url(../img/location/inf/Geoloc.svg);  
     margin-right: 25px;
     
 }
@@ -906,9 +916,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .location__companyNumber::before{
     content: '';
     display: inline-block;
-    width: 25px;
+    width: 26px;
     height: 40px;
-    background-image: url(../img/location/inf/Phone.png);  
+    background-image: url(../img/location/inf/Phone.svg);  
     margin-right: 25.5px;    
 }
 
@@ -990,4 +1000,53 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     position: absolute;
     left: 50px;
     bottom: 42px;
+}
+
+
+/* Footer */
+.myfooter{
+    background-color: #556867;
+    height: 127px;
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+}
+
+#logo__footer{
+    margin-left: 102px;
+    font-family: "BilboSwashCaps-Regular";
+    font-size: 48px;
+    text-decoration: none;
+    color: #FFFFFF;
+    
+}
+.navigation__footer{    
+    margin-left: 124px;
+}
+
+.navigation__footer nav ul{
+    display: inline-flex;
+    align-items: center;
+}
+
+.navigation__footer nav ul li{
+   margin-right: 50px;
+   
+}
+
+.navigation__footer nav ul li a{
+    
+    font-family: "MontserratAlternates-Regular";
+    font-size: 18px;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+#phoneNumber__footer::before{
+    content: '';
+    display: inline-block;
+    width: 14px;
+    height: 20px;
+    background-image: url(../img/footer/phone.svg);  
+    margin-right: 13.75px; 
 }
