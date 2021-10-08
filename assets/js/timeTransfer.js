@@ -1,7 +1,22 @@
         timeTransfer.onclick = function (){           
                 let date = new Date();
+                
                 let time = date.getHours();
-                if ( 9 <= time )
+                let _dateTransfer = document.getElementById('dateTransfer');
+                let dateTransferUsers = new Date(_dateTransfer.value);
+                
+              if(dateTransferUsers.getMonth() > date.getMonth() || dateTransferUsers.getDate() > date.getDate())
+              {
+                // ничего не удаляем
+                let option = document.getElementById('1');
+                    option.parentNode.appendChild(option);
+              }
+                
+              
+              
+              
+              
+              if ( 9 <= time )
                 {
                     let option = document.getElementById('1');
                     option.parentNode.removeChild(option);

@@ -266,20 +266,18 @@
                     <label for="flower__scales3">Любовь 200 BYN</label></li>
                   <li><input type="checkbox" 
                     id="flower__scales4" name="flower__scales">
-      <label for="flower__scales4">Оригинальный 120 BYN</label></li>
+                      <label for="flower__scales4">Оригинальный 120 BYN</label></li>
                   <li><input type="checkbox" 
                     id="flower__scales5" name="flower__scales">
-      <label for="flower__scales5">Улыбка 140 BYN</label></li>
+                      <label for="flower__scales5">Улыбка 140 BYN</label></li>
                   <li><input type="checkbox" 
                     id="flower__scales6" name="flower__scales">
-      <label for="flower__scales6">Поцелуй 210 BYN</label></li>
-    
-                  
+                      <label for="flower__scales6">Поцелуй 210 BYN</label></li>
+                     
                 </ul>
             </div>    
             <div class="param__decoration">
               <h3>Букет оформить в*</h3>
-
               <ul>
                 <li>                    
                     <input type="radio" id="flower__decoration1" name="flower__decoration">
@@ -306,7 +304,7 @@
               </ul>
             </div>    
             <div class="param__transfer">
-              <h3>Доставка*</h3>             
+              <h3>Доставка*</h3>    
               <ul>
                 <li>                    
                     <input type="radio" id="flower__transfer1" name="flower__transfer">
@@ -323,28 +321,7 @@
             <div class="param__transferDateTime">
               <div class="__date">
                 <h3>Дата доставки*</h3>          
-                <input type="date" id="dateTransfer" >
-                <script>
-                  let element = document.getElementById('dateTransfer');
-                  var today = new Date();
-                    var dd = today.getDate();
-                    var mm = today.getMonth() + 1; // Месяца идут с 0, так что добавляем 1.
-                    var yyyy = today.getFullYear();                    
-                    var ddmin = dd;
-                    var ddmax = dd + 20;
-
-                    if(ddmin < 10){
-                      ddmin ='0' + ddmin
-                    } 
-                    if(mm < 10){
-                      mm='0' + mm
-                    } 
-                    min = yyyy + '-' + mm + '-' + ddmin;
-                    max = yyyy + '-' + mm + '-' + ddmax;
-                    element.setAttribute("min", min);
-                    element.setAttribute("value", min);
-                    element.setAttribute("max", max);
-                </script>              
+                <input type="date" id="dateTransfer" >                           
               </div>
               
               <div class="__time">
@@ -356,7 +333,7 @@
                   <option id="4">18:00-21:00</option>
                   <option id="5">21:00-00:00</option>
                 </select>    
-                <script src="assets/js/timeTransfer.js"></script>                 
+                                
               </div>
             </div>    
 
@@ -466,8 +443,9 @@
             </nav>
           </div>
         </footer>             
-      </main>
-      
+      </main>      
     </div>
+    <script src="assets/js/dateTransfer.js"></script>  
+    <script src="assets/js/timeTransfer.js"></script> 
   </body>
 </html>
