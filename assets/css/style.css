@@ -85,17 +85,6 @@ border-spacing: 0;
     text-decoration: none;
     color: #424242;
 }
-/* Адаптивность для логотипа */
-@media screen and (max-width:768px) {
-    #logo {
-      font-size: 48px; 
-      margin-left: 46px;
-    }
-    .myHeader{
-        width: 768px;
-        height: 85px;
-    }
-}
 
 /* Устанавливаю стили для navigation */
 .navigation{
@@ -118,26 +107,32 @@ border-spacing: 0;
     text-decoration: none;
 }
 
-@media screen and (max-width:768px) {
-    nav a {
-      font-size: 10px;      
-    }
+.navigation__adapt{
+    display: none;
 }
 
-.main__chooseFlowers{
-    margin: auto;
+
+
+main{
     width: 1440px;
-    position: relative;
-    
+    background-color: #fff;
+    margin: auto;
 }
-.main__chooseFlowers img{
-    margin: auto;
+
+
+.main__chooseFlowers{
+    margin: auto;    
+    position: relative;
+    background-image: url(../img/Rectangle_1440.png);
+    
     width: 1440px;
+    height: 881px;
 }
 .information{
     font-family: "MontserratAlternates-Bold";
     font-size: 64px;    
     color: #424242;
+    line-height: 44px;
     position:absolute;
     top: 174px;
     left: 196px;
@@ -162,11 +157,6 @@ border-spacing: 0;
     font-size: 36px;   
     text-decoration: none;
     color: #fff;
-}
-main{
-    width: 1440px;
-    background-color: #fff;
-    margin: auto;
 }
 
 /* О нас */
@@ -359,6 +349,7 @@ main{
     background-color: #EBEBEE;
     position: relative;
     display: flex;
+    flex-wrap: wrap;
     justify-content:space-between;
 }
 
@@ -1050,3 +1041,4 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     background-image: url(../img/footer/phone.svg);  
     margin-right: 13.75px; 
 }
+

@@ -1,0 +1,184 @@
+/* Адаптивность для логотипа */
+@media screen and (max-width:1000px) {    
+    .myHeader{
+        width: 768px;
+        height: 85px;
+        justify-content: space-between;
+    }
+    #logo 
+    {
+        font-size: 48px; 
+        margin-left: 46px;
+    }
+    .navigation{
+        display: none;
+    }
+    .navigation__adapt
+    {
+        display:flex;
+        margin-right: 45px;
+    }
+
+    main{
+        width: 768px;
+    }
+
+    .main__chooseFlowers{
+        width: 768px;
+        height: 506px;
+    }
+    .information{
+        top: 106px;
+        left: 86px;
+        font-family: "MontserratAlternates-Bold";
+        font-size: 36px;    
+        color: #424242;
+    }
+    .chooseFlowersBtn{
+        top: 237px;
+        left: 253px;
+        width: 262px;
+        height: 54px;
+    }
+    .chooseFlowersBtn a{   
+        font-size: 24px;
+    }
+
+    .main__aboutUs{
+        margin-top: 50px; 
+    }
+
+    .main__aboutUs h2{
+        font-size: 36px;    
+    }
+
+    .aboutUs__properties{
+        width: 463px;
+        margin-top: 9px;
+    }
+    .aboutUs__properties ul{
+        display: flex;
+        flex-direction: row;
+        flex-wrap:wrap;
+        justify-content: space-between;  
+        row-gap:29px;  
+    }
+    .aboutUs__properties ul li{
+        width: 173px;
+    }
+    .aboutUs__properties ul li div img{
+        width: 140px;
+        height: 140px;    
+    }
+
+    .aboutUs__properties ul li p{
+        font-size: 18px; 
+        margin-top: 6px;
+        line-height: 21.94px;
+    }
+
+    
+    
+    .main__flowers{
+        margin-top: 50px;
+    }
+    .main__flowers h2{
+        font-size: 36px;
+    }
+    .flowers__type{
+        margin-top: 30px;
+        width: 677px;    
+        row-gap:22px;  
+    }
+
+    .flowers__type li
+    {    
+        background: #EBEBEE;
+        border-radius: 2px;    
+        width: 321px;
+        height: 577px;
+    }
+
+    .flower__img 
+    {     
+        text-align: center;
+        margin-top: 21px;
+    }
+    .flower__img img
+    {     
+        width: 279px;
+        height: 282px;
+    }
+
+    .flower__params
+    {       
+        margin-top: 28px;
+        font-size: 24px;   
+    }
+
+    .flower__price{
+        margin-top: 23px;
+        font-size: 36px;
+    }
+    
+    .flower__offer{
+        margin-top: 24px;
+        width: 251px;
+        height: 63px;
+    }
+
+    .flower__offer a{
+        font-size: 30px;   
+    }
+
+
+
+    .main__paidAndTransfer{
+        margin-top: 50px; 
+    }
+    
+    .main__paidAndTransfer h2{
+        font-size: 36px
+    }
+
+    .paidAndTransfer__property{
+        width: 667px;
+        margin-top: 30px;
+    }
+    .paidAndTransfer__property ul li{    
+        width: 201px;
+    }
+
+    .paidAndTransfer__property ul li div img{
+        width: 160px;
+        height: 160px;
+    }
+
+    .property__h
+    {
+        font-size: 24px;
+    }
+
+    .property__inf{
+        margin-top: 14px;
+        font-size: 18px;
+    }
+
+    .main__feedback{
+        margin-top: 50px;
+    }
+
+    .main__feedback h2{
+        font-size: 36px;  
+    }
+
+    .feedback__inf{
+        width: 672px;
+        margin-top: 30px;
+    }
+
+    .inf__users{
+        width: 546px;
+        height: 694px;   
+    }
+}
