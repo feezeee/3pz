@@ -23,16 +23,16 @@
         width: 768px;
     }
 
-    .main__chooseFlowers{
+    .chooseFlowersImg
+    {
         width: 768px;
         height: 506px;
     }
     .information{
         top: 106px;
         left: 86px;
-        font-family: "MontserratAlternates-Bold";
-        font-size: 36px;    
-        color: #424242;
+        font-size: 36px;
+        line-height: 44px;
     }
     .chooseFlowersBtn{
         top: 237px;
@@ -42,6 +42,7 @@
     }
     .chooseFlowersBtn a{   
         font-size: 24px;
+        line-height: 29px;
     }
 
     .main__aboutUs{
@@ -138,7 +139,8 @@
     }
     
     .main__paidAndTransfer h2{
-        font-size: 36px
+        font-size: 36px;
+        line-height: 44px;
     }
 
     .paidAndTransfer__property{
@@ -157,11 +159,13 @@
     .property__h
     {
         font-size: 24px;
+        line-height: 29px;
     }
 
     .property__inf{
         margin-top: 14px;
         font-size: 18px;
+        line-height: 22px;
     }
 
     .main__feedback{
@@ -180,5 +184,534 @@
     .inf__users{
         width: 546px;
         height: 694px;   
+        margin-left: 65px; 
     }
+
+    .__person
+    {
+        width: 506px;
+        height: 267px;
+        margin: 25px 20px 0px 20px;
+        row-gap: 25px;
+    }
+
+    .__person img {
+        position: absolute;
+        left: 0px;
+        top: 62px;
+        width: 138px;
+        height: 138px;
+        z-index: 2;
+    }
+    
+    .textField{
+        width: 440px;
+        height: 267px;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+    }
+
+    .firstLastName{
+        font-size: 24px;
+        line-height: 29px;    
+        margin-top: 44px;  
+        margin-left: 157px;  
+        width: 178px;
+    }
+
+    .textOfPerson{
+        font-size: 24px;
+        line-height: 29px;    
+        margin-top: 41px;  
+        margin-left: 90px;  
+        width: 312px;    
+    }
+
+    .__imgProduct{
+        width: 506px;
+        height: 352px;
+        margin: 0px 20px 0px 20px; 
+        background-image: url(../img/feedback/person1/product768.png);           
+    }
+
+    .inf__left
+    {
+        bottom: 329px;
+        left: 0px;
+    }
+
+    #swipeToLeft
+    {
+        width: 18px;
+        height: 35px;
+    }
+
+    .inf__right
+    {
+        bottom: 329px;
+        right: 0px;
+    }
+
+    #swipeToRight{
+        width: 18px;
+        height: 35px;
+    }
+
+
+
+
+    .main__order{
+        margin-top: 50px;
+    }
+
+    .main__order h2{
+        font-size: 36px;
+        line-height: 44px;
+    }
+
+    .order__param{
+        margin: auto;
+        margin-top: 30px;
+        width: 635px;
+    }
+
+    #order__firstName{
+        
+        font-size: 24px;    
+        line-height: 29px;
+    }
+    
+    #order__firstName::placeholder{
+        font-size: 24px;    
+        line-height: 29px;
+    }
+
+        
+    #order__lastName{
+        margin-top: 30px;
+        font-size: 24px;    
+        line-height: 29px;
+    }
+    #order__lastName::placeholder{
+        font-size: 24px;    
+        line-height: 29px;
+    }
+
+    
+    #order__phoneNumber1{
+        margin-top: 30px;
+        font-size: 24px;    
+        line-height: 29px;
+    }
+    #order__phoneNumber1::placeholder{
+        font-size: 24px;    
+        line-height: 29px;
+    }
+
+
+    .param__flower{
+        margin-top: 30px;
+    }
+
+    .param__flower h3{
+        font-size: 24px;    
+        line-height: 29px;
+    }
+
+    .param__flower ul{    
+        margin-left: 20px;
+        margin-top: 15px;
+    }
+
+    .param__flower ul li label{
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+
+
+    .param__decoration{
+        margin-top: 30px;
+    }
+
+    .param__decoration h3{
+        font-size: 24px;    
+        line-height: 29px;
+    }
+
+    .param__decoration ul{    
+        margin-left: 20px;
+        margin-top: 15px;
+    }
+
+    .param__decoration ul li label{
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+
+    .param__adding{
+        margin-top: 30px;
+    }
+
+    .param__adding h3{
+        font-size: 24px;    
+        line-height: 29px;
+    }
+    
+    .param__adding ul{    
+        margin-left: 20px;
+        margin-top: 15px;
+    }
+
+    .param__adding ul li label{
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+
+
+    .param__transfer{
+        margin-top: 30px;
+    }
+    .param__transfer h3{
+        font-size: 24px;    
+        line-height: 29px;
+    }
+    
+    .param__transfer ul{    
+        margin-left: 20px;
+        margin-top: 15px;
+    }
+
+    .param__transfer ul li label{
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+
+    .param__transferDateTime{
+        margin-top: 30px;
+    }
+
+    .__date h3{
+        font-size: 24px;    
+        line-height: 29px;
+    }
+
+    .__time h3
+    {
+        font-size: 24px;    
+        line-height: 29px;
+    }
+
+
+    #dateTransfer{
+        margin-top: 15px;
+        width: 190px;
+        font-size: 24px;
+        line-height: 29px;
+        padding-right: 15px;
+        padding-left: 20px;
+    }
+
+    input[type="date"]::-webkit-calendar-picker-indicator {
+        
+           
+        width: 33px;
+        height: 33px;
+    }
+
+    #timeTransfer{
+        margin-top: 15px;
+        width: 229px;
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+
+    .param__addressTransfer{        
+        margin-top: 30px;
+    }
+
+    #addressTransfer{
+        font-size: 36px;
+        line-height: 44px;
+    }
+
+
+    .param__coment{
+        margin-top: 30px;
+    }
+
+    #coment{
+        font-size: 36px;
+        line-height: 44px;        
+    }
+
+
+    .param__text{
+        margin-top: 21px;
+    }
+    .param__text p{
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+
+    .param__result{
+    
+        margin-top: 23px;
+    }
+    .param__result p{
+        font-size: 48px;      
+    }
+
+    .param__result p::before{
+        font-size: 36px;
+        line-height: 44px; 
+    }
+    
+    .param__result p::after{
+        font-size: 48px;
+    }
+
+
+
+    
+    .param__button{
+        margin-top: 44px;
+    }
+
+
+    #order{
+        
+        width: 182px;
+        height: 52px;
+        font-size: 24px;
+        line-height: 29px
+    }
+    #clear{
+        width: 196px;
+        height: 52px;
+        font-size: 24px;
+        line-height: 29px;
+        margin-left: 53px;
+    }
+
+
+
+    
+    .location{
+        margin-top: 50px;
+        overflow: hidden;
+    }
+    
+    .location__map{
+        display: block;
+        width: 100%;
+        height: 553px;
+        object-fit: fill;
+    }
+
+
+    .location__additionalParam{
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 263px;
+        height: 266px;
+        background-color: #71A27C;
+    }
+
+    .location__address{
+        font-size: 14px;
+        line-height: 17px;
+        margin: 27px 0px 0px 32px;
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    .location__address::before{        
+        width: 16px;
+        height: 20px;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height='20' viewBox='0 0 16 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M7.42001 19.5263C7.58925 19.6454 7.79203 19.7095 8 19.7095C8.20797 19.7095 8.41075 19.6454 8.57999 19.5263C8.88399 19.3145 16.0289 14.2304 15.9999 7.88385C15.9999 3.53689 12.411 0 8 0C3.58905 0 8.80368e-05 3.53689 8.80368e-05 7.87892C-0.0289116 14.2304 7.11601 19.3145 7.42001 19.5263ZM8 1.97096C11.309 1.97096 13.9999 4.62289 13.9999 7.88878C14.0209 12.2623 9.61198 16.1895 8 17.4775C6.38902 16.1885 1.97907 12.2604 2.00007 7.88385C2.00007 4.62289 4.69104 1.97096 8 1.97096Z' fill='white'/%3e%3c/svg%3e ");
+        margin-right: 15px;   
+         
+    }
+
+    
+    .location__companyNumber{
+        font-size: 14px;
+        line-height: 17px;
+        margin: 18px 0px 0px 32px;
+        font-size: 14px;
+        line-height: 17px;
+    }
+    .location__companyNumber::before{
+        content: '';
+        display: inline-block;
+        width: 15px;
+        height: 23px;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='15' height='23' viewBox='0 0 15 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M11.5213 2.25369H3.42343C3.06548 2.25369 2.72219 2.39812 2.46908 2.65521C2.21597 2.9123 2.07377 3.26099 2.07377 3.62457V20.0751C2.07377 20.4387 2.21597 20.7874 2.46908 21.0445C2.72219 21.3016 3.06548 21.446 3.42343 21.446H11.5213C11.8793 21.446 12.2226 21.3016 12.4757 21.0445C12.7288 20.7874 12.871 20.4387 12.871 20.0751V3.62457C12.871 3.26099 12.7288 2.9123 12.4757 2.65521C12.2226 2.39812 11.8793 2.25369 11.5213 2.25369ZM3.42343 0.882813C2.70753 0.882813 2.02095 1.17168 1.51473 1.68586C1.00851 2.20004 0.724121 2.89741 0.724121 3.62457V20.0751C0.724121 20.8023 1.00851 21.4997 1.51473 22.0139C2.02095 22.528 2.70753 22.8169 3.42343 22.8169H11.5213C12.2372 22.8169 12.9238 22.528 13.43 22.0139C13.9363 21.4997 14.2206 20.8023 14.2206 20.0751V3.62457C14.2206 2.89741 13.9363 2.20004 13.43 1.68586C12.9238 1.17168 12.2372 0.882813 11.5213 0.882812L3.42343 0.882813Z' fill='white'/%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M7.4722 20.0752C7.83015 20.0752 8.17343 19.9307 8.42654 19.6736C8.67964 19.4165 8.82184 19.0677 8.82184 18.7041C8.82184 18.3405 8.67964 17.9917 8.42654 17.7346C8.17343 17.4775 7.83015 17.333 7.4722 17.333C7.11425 17.333 6.77097 17.4775 6.51786 17.7346C6.26475 17.9917 6.12256 18.3405 6.12256 18.7041C6.12256 19.0677 6.26475 19.4165 6.51786 19.6736C6.77097 19.9307 7.11425 20.0752 7.4722 20.0752Z' fill='white'/%3e%3c/svg%3e ");
+        margin-right: 15px;            
+    }
+
+    .location__messengers{
+        margin: 29px 0px 0px 34px;
+        max-width: 150px;
+    }
+
+    .location__messengers ul li{        
+        margin-bottom: 16px;
+    }
+    .location__messengers ul li div{
+        height: 19px;
+    }
+
+    .location__viber img{
+        width: 17px;
+        height: 16px;
+    }
+    .location__telegram img{
+        width: 16px;
+        height: 12px;
+    }
+    
+    .location__whatsApp img{
+        width: 18px;
+        height: 17px;
+    }
+    
+    .location__instagram img{
+        width: 16px;
+        height: 15px;
+    }
+    .location__facebook img{
+        width: 16px;
+        height: 16px;
+    }
+    .location__vk img{
+        width: 20px;
+        height: 19px;
+    }
+
+    
+    .location__orderCall{
+        
+        bottom: 26px;
+        left: 32px;
+        width: 196px;
+        height: 38px;
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .OrderMenu
+    {
+        position: relative;    
+        width: 562.85px;
+        height: 399px;
+        background: #EBEBEE;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+    }
+
+    #orderClose
+    {    
+        position: absolute;
+        top: 13.71px;
+        left: 526.52px;
+        width: 18.71px;
+        height: 18.71px;
+    }
+
+    .OrderMenu h2
+    {        
+        font-size: 30px;
+        line-height: 37px;
+        top: 37px;
+        left: 135px;
+
+    }
+
+
+    .OrderMenu p
+    {       
+        font-size: 18px;
+        line-height: 22px;
+        width: 388px;
+        top: 117px;
+        left: 87px;
+
+    }
+
+
+    #order__phoneNumber2{        
+        top: 194px;
+        left: 60px;
+        width: 444px;
+        font-size: 24px;
+        line-height: 29px;
+    }
+    #order__phoneNumber2::placeholder{
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    #makeOrder
+    {        
+        top:290px;
+        left: 184px;   
+        width: 194px; 
+        height: 50px;
+        font-size: 18px;
+        line-height: 25px;  
+    }
+
+
+
+    
+    .location__geotag{
+        left: 319px;
+        top: 253px;
+        width: 65px;
+        height: 86.67px;
+    }
+
+    .location__geotagShadow{
+        left: 321.41px;
+        top: 333.65px;
+        width: 60.79px;
+        height: 8.43px;
+    }
+    .backToTop{
+        width: 71px;
+        height: 71px;
+        left: 38px;
+        bottom: 29px;
+    }
+    
+    .myfooter{
+        height: 97px;
+        justify-content: center;
+    }
+
+    #logo__footer{
+        margin: 0px;
+        font-size: 36px;
+        line-height: 45px;        
+    }
+
+    .navigation__footer
+    {
+        display: none;
+    }
+
+
+
+
+
+
 }

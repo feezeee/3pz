@@ -3,8 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-    
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />    
     <link rel="stylesheet" type="text/css" href="assets/css/adapt768.css"/>
     
     <title>Document</title>
@@ -12,7 +11,7 @@
   <body>
     <div class="layout">
       <header class="myHeader">
-        <a id="logo" href=".">
+        <a id="logo" href="index.html">
           <span>Flowers</span>
         </a>
         <div class="navigation">
@@ -36,12 +35,13 @@
       </header>
       <main>
         <div class="main__chooseFlowers">
+          <img class="chooseFlowersImg" src="assets/img/Rectangle_1440.png" alt="">
           <span class="information"
             >Быстрая доставка букетов<br />
             по всему Минску
           </span>
           <div class="chooseFlowersBtn">
-            <a href="">Выбрать букет</a>
+            <a href="#main__flowers__anchor">Выбрать букет</a>
           </div>
         </div>
 
@@ -76,7 +76,7 @@
             </ul>
           </div>
         </div>
-
+        <a id="main__flowers__anchor"></a>
         <div class="main__flowers">
           <h2>Букеты</h2>
           <ul class="flowers__type">
@@ -182,50 +182,37 @@
         <div class="main__feedback">
           <h2>Отзывы</h2>
           <div class="feedback__inf">
-            <div class="inf__left">
-              <div class="inf__table-cell">
+            <div class="inf__left">              
                 <img
                   id="swipeToLeft"
                   src="assets/img/feedback/left.svg"
                   alt=""
-                />
-              </div>
+                />              
             </div>
             <div class="inf__users">
               <div class="__person">
-                <img src="assets/img/feedback/person1/person.png" alt="" />
-              </div>
-              <div class="infFromPerson">
-                <div class="__product">
-                  <div class="__inf">
-                    <p class="firstLastName">Анастасия<br />Иванова</p>
+                  <img src="assets/img/feedback/person1/person.png" alt="">
+                  <div class="textField">
+                    <p class="firstLastName">Анастасия<br/>Иванова</p>
                     <p class="textOfPerson">
                       Спасибо за чудесный букет! Все пришло вовремя)
                     </p>
                   </div>
-                </div>
               </div>
-              <img
-                class="productPerson"
-                src="assets/img/feedback/person1/product.svg"
-                alt=""
-              />
+              <div class="__imgProduct">
+                
+              </div>
             </div>
-            <div class="inf__right">
-              <div class="inf__table-cell">
+            <div class="inf__right">              
                 <img
                   id="swipeToRight"
                   src="assets/img/feedback/right.svg"
                   alt=""
                 />
-              </div>
+                              
             </div>
           </div>
-        </div>
-        <!-- Подключение библиотеки jQuery -->
-        <script src="assets/js/jquery.js"></script>
-        <!-- Подключение jQuery плагина Masked Input -->
-        <script src="assets/js/jquery.maskedinput.min.js"></script>
+        </div>        
         <div class="main__order">
           <h2>Оформить заказ</h2>
           <form action="">
@@ -243,19 +230,11 @@
               placeholder="Фамилия*"
             />
             <input
-              id="order__phoneNumber"
-              name="order__phoneNumber"
+              id="order__phoneNumber1"
+              name="order__phoneNumber1"
               type="tel"
               placeholder="Телефон*"
-            />
-            <script>
-              //Код jQuery, установливающий маску для ввода телефона элементу input
-              //1. После загрузки страницы,  когда все элементы будут доступны выполнить...
-              $(function () {
-                //2. Получить элемент, к которому необходимо добавить маску
-                $("#order__phoneNumber").mask("+375(99) 999-99-99");
-              });
-            </script> 
+            />            
             <div class="param__flower">
               <h3>Букет*</hз>
                 <ul>
@@ -373,7 +352,7 @@
         </div>
 
         <div class="location">
-          <img class="location__map" src="assets/img/location/Map.svg" alt="">
+          <img class="location__map" src="assets/img/location/Map.png" alt="">
           <div class="location__additionalParam">
             <p class="location__address">
               г. Минск, ул. Белая 1
@@ -385,50 +364,77 @@
               <ul>
                 <li>
                   <div class="location__viber">
-                    <img src="assets/img/location/inf/Viber.svg" alt="">
+                    <img src="assets/img/location/inf/Viber.png" alt="">
                   </div>
                 </li>
                 <li>
                   <div class="location__telegram">
-                    <img src="assets/img/location/inf/Telegram.svg" alt="">
+                    <img src="assets/img/location/inf/Telegram.png" alt="">
                   </div>
                 </li>
                 <li>
                   <div class="location__whatsApp">
-                    <img src="assets/img/location/inf/WhatsApp.svg" alt="">
+                    <img src="assets/img/location/inf/WhatsApp.png" alt="">
                   </div>
                 </li>         
                 <li>
                   <div class="location__instagram">
-                    <img src="assets/img/location/inf/Instagram.svg" alt="">
+                    <img src="assets/img/location/inf/Instagram.png" alt="">
                   </div>
                 </li>   
                 <li>
                   <div class="location__facebook">
-                    <img src="assets/img/location/inf/Facebook.svg" alt="">
+                    <img src="assets/img/location/inf/Facebook.png" alt="">
                   </div>
                 </li> 
                 <li>
                   <div class="location__vk">
-                    <img src="assets/img/location/inf/Vk.svg" alt="">
+                    <img src="assets/img/location/inf/Vk.png" alt="">
                   </div>
                 </li>    
-              </ul>
-            
-          
+              </ul>   
             </div>
-            <button class="location__orderCall">
+
+            <button class="location__orderCall" id="orderCall">
               Заказать звонок
             </button>
-            </div>
+
+                                    
+            
+          </div>
+
+
+
             <img class="location__geotag" src="assets/img/location/geotag.png" alt="">
             <img class="location__geotagShadow" src="assets/img/location/shadow.png" alt="">
             
-              <img class="backToTop" src="assets/img/location/arrowtop.png" alt="">
-                   
-        </div>   
+            <img class="backToTop" src="assets/img/location/arrowtop.png" alt="">
+
+                
+        </div> 
+
+        <div class="popupOrderPlace"> 
+          <form>
+            <div class="OrderMenu">          
+                <img id="orderClose" src="assets/img/location/inf/Close.png" alt=""/>
+                <h2>Заказать звонок</h2>
+                <p>Оставьте свой номер телефона, и мы
+                  перезвоним Вам. 
+                </p>
+                <input
+                    id="order__phoneNumber2"
+                    name="order__phoneNumber2"
+                    type="tel"                    
+                    placeholder="Телефон*"/>     
+                 <button id="makeOrder">
+                  Заказать звонок
+                 </button>   
+          </div> 
+        </form>        
+      </div>  
+        
         <footer class="myfooter">
-          <a id="logo__footer" href=".">
+          <a id="logo__footer" href="index.html">
             <span>Flowers</span>
           </a>
           <div class="navigation__footer">
@@ -449,8 +455,19 @@
           </div>
         </footer>             
       </main>      
-    </div>
+    </div>    
+    <!-- Подключение библиотеки jQuery -->
+    <script src="assets/js/jquery.js"></script>
+    <!-- Подключение jQuery плагина Masked Input -->
+    <script src="assets/js/jquery.maskedinput.min.js"></script>
     <script src="assets/js/dateTransfer.js"></script>  
     <script src="assets/js/timeTransfer.js"></script> 
+    <script>
+      $(document).ready(function() {
+      $("#order__phoneNumber1").mask("+375(99) 999-99-99");
+      $("#order__phoneNumber2").mask("+375(99) 999-99-99");
+    });
+    </script>
+    <script src="assets/js/orderCall.js"></script>
   </body>
 </html>

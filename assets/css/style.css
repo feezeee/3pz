@@ -121,10 +121,10 @@ main{
 
 
 .main__chooseFlowers{
-    margin: auto;    
-    position: relative;
-    background-image: url(../img/Rectangle_1440.png);
-    
+    margin: auto;     
+    position: relative;   
+}
+.chooseFlowersImg{ 
     width: 1440px;
     height: 881px;
 }
@@ -132,7 +132,7 @@ main{
     font-family: "MontserratAlternates-Bold";
     font-size: 64px;    
     color: #424242;
-    line-height: 44px;
+    line-height: 78px;
     position:absolute;
     top: 174px;
     left: 196px;
@@ -341,49 +341,51 @@ main{
     width: 1176px;
     display: flex;
     justify-content:space-between;
+    position: relative;
 }
 .inf__users{
-    
+    margin-left: 91px;    
     width: 994px;
     height: 549px;
     background-color: #EBEBEE;
-    position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content:space-between;
+    
 }
-
-
 .__person
 {
-    position: absolute;  
-    left: 153px;
-    top: 26px;
-    z-index: 2;
+    position: relative;  
+    width: 385px; 
+    margin: 26px 0px 26px 48px;
 }
 
-.__product
+.__person img {
+    position: absolute;
+    left: 105px;
+    top: 0px;
+    width: 174px;
+    height: 174px;
+    z-index: 2;
+}
+.textField
 {
-    z-index: 1;
     background-color: #ffffff;
     position: absolute;
     height: 411px;
-    width: 385px;
-    top: 112px;
-    left: 48px;
+    top: 86px;
+    width: 100%;
+    z-index: 1;    
     box-shadow: 0px 4px 4px rgba(85, 104, 103, 0.25);
 }
-
-.__inf{
-    margin-top: 113px;
-}
-
 .firstLastName{
+
     font-family: "MontserratAlternates-Bold";
     font-size: 28px;    
     color: #424242;
     text-align: center;
     line-height: 34px;
+    margin-top: 113px;
 }
 
 .textOfPerson{
@@ -394,19 +396,25 @@ main{
     line-height: 34px;
     margin-top: 34px;
 }
-.productPerson{
+
+.__imgProduct
+{
     width: 507px;
     height: 497px;
-    margin-right: 31px;  
-    margin-top: 26px;
-    margin-bottom: 26px;
+    margin: 26px 31px 26px 0px;    
     filter: drop-shadow(0px 4px 4px rgba(85, 104, 103, 0.25));
+    background-image: url(../img/feedback/person1/product.png);
 }
+
+
 
 /* Кнопка влево */
 .inf__left
 {   
-    display: table;
+    position: absolute;
+    bottom: 263px;
+    left: 0px;
+    
 }
 #swipeToLeft
 {
@@ -414,16 +422,12 @@ main{
     height: 62px;
 }
 
-.inf__table-cell
-{
-    display: table-cell; 
-    vertical-align	: middle;
-}
 /* Кнопка вправо */
 .inf__right
-{
-    
-    display: table;
+{    
+    position: absolute;
+    bottom: 263px;
+    right: 0px;
 }
 #swipeToRight{
     width: 31px;
@@ -438,6 +442,7 @@ main{
 .main__order h2{
     font-family: "MontserratAlternates-Bold";
     font-size: 48px;    
+    line-height: 59px;
     color: #424242;
     text-align: center;
 }
@@ -453,12 +458,14 @@ main{
     border-bottom: 1px solid #000000;
     font-family: "MontserratAlternates-Regular";
     font-size: 36px;    
+    line-height: 44px;
     color: #000000; 
     text-transform: capitalize;  
 }
 #order__firstName::placeholder{
     font-family: "MontserratAlternates-Regular";
-    font-size: 36px;    
+    font-size: 36px;   
+    line-height: 44px; 
     color: #000000;
     opacity: 0.5;
 }
@@ -511,7 +518,7 @@ main{
     color: transparent
 }
 
-#order__phoneNumber{
+#order__phoneNumber1{
     margin-top: 93px;
     width: 100%;
     border: 0px;
@@ -520,7 +527,7 @@ main{
     font-size: 36px;    
     color: #000000;
 }
-#order__phoneNumber::placeholder{
+#order__phoneNumber1::placeholder{
     font-family: "MontserratAlternates-Regular";
     font-size: 36px;    
     color: #000000;
@@ -531,7 +538,6 @@ main{
     margin-top: 93px;
 }
 .param__flower h3{
-    margin-top: 93px;
     font-family: "MontserratAlternates-Regular";
     font-size: 36px;    
     color: #000000;
@@ -634,7 +640,6 @@ input[type=radio]+label::before {
     margin-top: 93px;
 }
 .param__decoration h3{
-    margin-top: 93px;
     font-family: "MontserratAlternates-Regular";
     font-size: 36px;    
     color: #000000;
@@ -654,11 +659,12 @@ input[type=radio]+label::before {
     line-height: 29px;
 }
 
+
+
 .param__adding{
     margin-top: 93px;
 }
 .param__adding h3{
-    margin-top: 93px;
     font-family: "MontserratAlternates-Regular";
     font-size: 36px;    
     color: #000000;
@@ -680,11 +686,11 @@ input[type=radio]+label::before {
 }
 
 
+
 .param__transfer{
     margin-top: 93px;
 }
 .param__transfer h3{
-    margin-top: 93px;
     font-family: "MontserratAlternates-Regular";
     font-size: 36px;    
     color: #000000;
@@ -705,6 +711,8 @@ input[type=radio]+label::before {
     line-height: 29px;
 }
 
+
+
 .param__transferDateTime
 {
     margin-top: 95px;
@@ -716,7 +724,6 @@ input[type=radio]+label::before {
 }
 .__date h3
 {
-    margin-top: 93px;
     font-family: "MontserratAlternates-Regular";
     font-size: 36px;    
     color: #000000;
@@ -729,7 +736,6 @@ input[type=radio]+label::before {
 }
 .__time h3
 {
-    margin-top: 93px;
     font-family: "MontserratAlternates-Regular";
     font-size: 36px;    
     color: #000000;
@@ -753,10 +759,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     color: rgba(0, 0, 0, 0);
     opacity: 1;
     display: block;
-    background-image: url("../img/Calendar.png"); 
-       
+    background-image: url("../img/Calendar.svg"); 
+    
     width: 48px;
-    height: 48px;
+    height: 40px;
 }
 
 #timeTransfer{
@@ -768,6 +774,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     font-size: 36px;    
     color: #000000;
 }
+
+
+
 /* Адрес доставки */
 .param__addressTransfer{
     width: 100%;
@@ -782,6 +791,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     font-size: 36px;    
     color: #000000;
 }
+
+
+
 .param__coment{
     margin-top: 93px;
 }
@@ -795,6 +807,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     color: #000000;
     
 }
+
+
 
 .param__text{
     margin-top: 21px;
@@ -831,6 +845,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     color: #71A27C;
     content: "BYN";
 }
+
+
+
 .param__button{
     margin-top: 55px;
     text-align: center;
@@ -859,6 +876,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     margin-left: 76px;
     border: 0px;
 }
+
+
+
 
 .location{
     margin-top: 90px;
@@ -892,8 +912,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     width: 28px;
     height: 36px;
     background-image: url(../img/location/inf/Geoloc.svg);  
-    margin-right: 25px;
-    
+    margin-right: 25px;    
 }
 
 .location__companyNumber{
@@ -916,12 +935,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .location__messengers{
     margin: 61px 0px 0px 95px;
     max-width: 310px;
-    height: 96px;
 }
 
 .location__messengers ul li{
     display: inline-block;
-    width: 32%;
+    width: 31%;
     margin-bottom: 27px;
 }
 .location__messengers ul li div{
@@ -939,7 +957,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     height: 23.28px;
 }
 
-.location__whatsapp img{
+.location__whatsApp img{
     width: 33.23px;
     height: 30.72px;
 }
@@ -971,6 +989,110 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     font-size: 24px;    
     color: #71A27C; 
 }
+
+.popupOrderPlace
+{
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.popupOrderPlace.active {
+    opacity: 1;
+    pointer-events: all;
+    transition: 0.5s all;
+}
+
+.OrderMenu
+{
+    position: relative;    
+    width: 821px;
+    height: 582px;
+    background: #EBEBEE;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+#orderClose
+{    
+    position: absolute;
+    top: 20px;
+    left: 768px;
+    width: 27.29px;
+    height: 27.29px;
+}
+
+.OrderMenu h2
+{        
+    position: absolute;
+    text-align: center;
+    font-family: "MontserratAlternates-Bold";
+    font-size: 36px;
+    line-height: 44px;
+    top: 54px;
+    left: 252px;
+
+}
+
+
+.OrderMenu p
+{       
+    position: absolute; 
+    text-align: center;
+    font-family: "MontserratAlternates-Regular";
+    font-size: 24px;
+    line-height: 29px;
+    width: 510px;
+    top: 170px;
+    left: 156px;
+
+}
+
+
+#order__phoneNumber2{
+    position: absolute;
+    top: 283px;
+    left: 87px;
+    width: 648px;
+    border: 0px;
+    border-bottom: 1px solid #000000;
+    font-family: "MontserratAlternates-Regular";
+    font-size: 36px;    
+    color: #000000;
+    background-color: transparent;
+}
+#order__phoneNumber2::placeholder{
+    font-family: "MontserratAlternates-Regular";
+    font-size: 36px;    
+    color: #000000;
+    opacity: 0.5;
+}
+
+#makeOrder
+{
+    position: absolute;
+    top:423px;
+    left: 269px;   
+    width: 284px; 
+    height: 73px;
+    background: #556867;
+    border-radius: 20px;
+    border: 0;
+    font-family: "MontserratAlternates-Regular";
+    font-size: 24px;
+    line-height: 33px;   
+    color:#F4F5FF;
+}
+
 
 .location__geotag{
     position: absolute;
