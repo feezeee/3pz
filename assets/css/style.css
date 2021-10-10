@@ -76,6 +76,7 @@ border-spacing: 0;
     align-items: center;
     height: 154px;
     background:#fff;
+    position: relative;
 }
 /* Логотип flowers */
 #logo{ 
@@ -109,6 +110,69 @@ border-spacing: 0;
 
 .navigation__adapt{
     display: none;
+    cursor: pointer;
+}
+
+.navigation__adapt__popup{  
+    position: absolute;  
+    top: 0px;
+    right: 0px;
+    width: 301px;
+    height: 369px;
+    background: #ffffff;
+    z-index: 3;
+    display: flex;
+    justify-content: right;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.navigation__adapt__popup.active {
+    opacity: 1;
+    pointer-events: all;
+    transition: 0.5s all;
+}
+
+.navigation__adapt__popup div{
+    position: relative; 
+    width: 100%;
+    height: 100%;
+}
+
+
+.navigation__adapt__popup div img
+{    
+    position: absolute;
+    top: 16px;
+    left: 18px;
+    height: 36px;
+    width: 36px;
+    cursor: pointer;
+}
+
+.navigation__adapt__popup div ul
+{
+    top: 21px;
+    right: 49px;
+    height: 100%;
+    width: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+}
+
+.navigation__adapt__popup div ul li
+{    
+    text-align: right;
+    width: 140px;
+}
+.navigation__adapt__popup div ul li a
+{
+    font-family: "MontserratAlternates-Bold";
+    font-size: 22px;
+    line-height: 27px;
+    color: #424242;
+    text-decoration: none;
 }
 
 
@@ -296,7 +360,8 @@ main{
 }
 .paidAndTransfer__property ul{
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .paidAndTransfer__property ul li{    
@@ -420,6 +485,7 @@ main{
 {
     width: 31px;
     height: 62px;
+    cursor: pointer;
 }
 
 /* Кнопка вправо */
@@ -432,6 +498,7 @@ main{
 #swipeToRight{
     width: 31px;
     height: 62px;
+    cursor: pointer;
 }
 
 /* Оформить заказ */
@@ -821,7 +888,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .param__result{
     
-    margin: 90px auto;
+    margin: 90px auto 0px auto;
     width: 100%;
     text-align: center;
 }
@@ -836,14 +903,15 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     font-family: "MontserratAlternates-Bold";
     font-size: 48px;    
     color: #71A27C;
-    content: "Итого:";
+    content: "Итого: ";
+
 }
 
 .param__result p::after{
     font-family: "MontserratAlternates-Bold";
     font-size: 72px;    
     color: #71A27C;
-    content: "BYN";
+    content: " BYN";
 }
 
 
@@ -863,6 +931,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     font-size: 36px;    
     color: #ffffff;    
     border: 0px;
+    cursor: pointer;
 }
 #clear{
     background: #71A27C;
@@ -875,6 +944,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     color: #ffffff; 
     margin-left: 76px;
     border: 0px;
+    cursor: pointer;
 }
 
 
@@ -882,13 +952,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .location{
     margin-top: 90px;
-    width: 100%;
+    width: 100%;    
     position: relative;
 }
 .location__map{
     width: 100%;
     height: 772px;
-    position: relative;
 }
 .location__additionalParam{
     position: absolute;
@@ -988,6 +1057,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     font-family: "MontserratAlternates-Bold";
     font-size: 24px;    
     color: #71A27C; 
+    cursor: pointer;
 }
 
 .popupOrderPlace
@@ -1029,6 +1099,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     left: 768px;
     width: 27.29px;
     height: 27.29px;
+    cursor: pointer;
 }
 
 .OrderMenu h2
@@ -1091,6 +1162,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     font-size: 24px;
     line-height: 33px;   
     color:#F4F5FF;
+    cursor: pointer;
 }
 
 

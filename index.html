@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />    
-    <link rel="stylesheet" type="text/css" href="assets/css/adapt768.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/adapt768.css"/> 
+    <link rel="stylesheet" type="text/css" href="assets/css/adapt375.css"/>
     
     <title>Document</title>
   </head>
@@ -17,22 +18,35 @@
         <div class="navigation">
           <nav>
             <ul>
-              <li><a id="aboutCompany" href="#thingOne"> О нас </a></li>
-              <li><a id="flowers" href="#thingTwo"> Букеты </a></li>
-              <li><a id="Отзывы" href="#thingThree"> Отзывы </a></li>
+              <li><a id="aboutCompany__header" href="#main__aboutUs__anchor"> О нас </a></li>
+              <li><a id="flowers__header" href="#main__flowers__anchor"> Букеты </a></li>
+              <li><a id="coments__header" href="main__feedback__anchor"> Отзывы </a></li>
               <li>
-                <a id="Доставка и оплата" href="#thingThree">
+                <a id="orderAndTransfer__header" href="#main__paidAndTransfer__anchor">
                   Доставка и оплата
                 </a>
               </li>
-              <li><a id="Контакты" href="#thingThree"> Контакты </a></li>
+              <li><a id="contacts__header" href="#location__companyNumber__anchor"> Контакты </a></li>
             </ul>
           </nav>          
         </div> 
         <div class="navigation__adapt">
-          <img src="assets/adapt768/img/header/menu.svg" alt="">
-        </div>       
-      </header>
+          <img id="navigationNavOpen" src="assets/adapt768/img/header/menu.svg" alt="">
+        </div> 
+        <div class="navigation__adapt__popup"> 
+          <div>                      
+            <img id="navigationNavClose" src="assets/img/header/Close.png" alt="">
+            <ul>
+              <li><a href="#main__aboutUs__anchor">О нас</a></li>
+              <li><a href="#main__flowers__anchor">Букеты</a></li>
+              <li><a href="#main__feedback__anchor">Отзывы</a></li>
+              <li><a href="#main__paidAndTransfer__anchor">Доставка
+                и оплата</a></li>
+              <li><a href="#location__companyNumber__anchor">Контакты</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>      
       <main>
         <div class="main__chooseFlowers">
           <img class="chooseFlowersImg" src="assets/img/Rectangle_1440.png" alt="">
@@ -44,6 +58,10 @@
             <a href="#main__flowers__anchor">Выбрать букет</a>
           </div>
         </div>
+
+
+        
+        <a id="main__aboutUs__anchor"></a>
 
         <div class="main__aboutUs">
           <h2>О нас</h2>
@@ -76,7 +94,11 @@
             </ul>
           </div>
         </div>
+
+
         <a id="main__flowers__anchor"></a>
+
+
         <div class="main__flowers">
           <h2>Букеты</h2>
           <ul class="flowers__type">
@@ -143,6 +165,8 @@
           </ul>
         </div>
 
+        <a id="main__paidAndTransfer__anchor"></a>
+
         <div class="main__paidAndTransfer">
           <h2>Оплата и доставка</h2>
           <div class="paidAndTransfer__property">
@@ -179,6 +203,9 @@
           </div>
         </div>
 
+        <a id="main__feedback__anchor"></a>
+
+
         <div class="main__feedback">
           <h2>Отзывы</h2>
           <div class="feedback__inf">
@@ -212,7 +239,10 @@
                               
             </div>
           </div>
-        </div>        
+        </div>       
+        
+        
+
         <div class="main__order">
           <h2>Оформить заказ</h2>
           <form action="">
@@ -239,23 +269,20 @@
               <h3>Букет*</hз>
                 <ul>
                   <li>                    
-                      <input type="checkbox" id="flower__scales1" name="flower__scales">
+                      <input type="checkbox" id="flower__scales1" name="flower__scales" onchange="changeCheckCheckBox(this, 100)">
                       <label for="flower__scales1">Нежность  100 BYN</label>                    
                   </li>
                   <li>
-                    <input type="checkbox" id="flower__scales2" name="flower__scales">
+                    <input type="checkbox" id="flower__scales2" name="flower__scales" onchange="changeCheckCheckBox(this, 150)">
                     <label for="flower__scales2">Ласка 150 BYN</label></li>
                   <li>
-                    <input type="checkbox" id="flower__scales3" name="flower__scales">
+                    <input type="checkbox" id="flower__scales3" name="flower__scales" onchange="changeCheckCheckBox(this, 200)">
                     <label for="flower__scales3">Любовь 200 BYN</label></li>
-                  <li><input type="checkbox" 
-                    id="flower__scales4" name="flower__scales">
+                  <li><input type="checkbox" id="flower__scales4" name="flower__scales" onchange="changeCheckCheckBox(this, 120)">
                       <label for="flower__scales4">Оригинальный 120 BYN</label></li>
-                  <li><input type="checkbox" 
-                    id="flower__scales5" name="flower__scales">
+                  <li><input type="checkbox" id="flower__scales5" name="flower__scales" onchange="changeCheckCheckBox(this, 140)">
                       <label for="flower__scales5">Улыбка 140 BYN</label></li>
-                  <li><input type="checkbox" 
-                    id="flower__scales6" name="flower__scales">
+                  <li><input type="checkbox" id="flower__scales6" name="flower__scales" onchange="changeCheckCheckBox(this, 210)">
                       <label for="flower__scales6">Поцелуй 210 BYN</label></li>
                      
                 </ul>
@@ -264,11 +291,11 @@
               <h3>Букет оформить в*</h3>
               <ul>
                 <li>                    
-                    <input type="radio" id="flower__decoration1" name="flower__decoration">
+                    <input type="radio" id="flower__decoration1" name="flower__decoration" onchange="changeCheckRadio(this, 2)">
                     <label for="flower__decoration1">Коробку ( +2 BYN)</label>                    
                 </li>
                 <li>
-                  <input type="radio" id="flower__decoration2" name="flower__decoration">
+                  <input type="radio" id="flower__decoration2" name="flower__decoration" onchange="changeCheckRadio(this, 0)">
                   <label for="flower__decoration2">Флористическую бумагу</label></li> 
                                 
               </ul>
@@ -278,11 +305,11 @@
               <h3>К букету добавить</h3>
               <ul>
                 <li>                    
-                  <input type="checkbox" id="flower__adding1" name="flower__adding">
+                  <input type="checkbox" id="flower__adding1" name="flower__adding" onchange="changeCheckCheckBox(this, 1)">
                   <label for="flower__adding1">Открытку ( +1 BYN)</label>                    
                 </li>
                 <li>
-                  <input type="checkbox" id="flower__adding2" name="flower__scales">
+                  <input type="checkbox" id="flower__adding2" name="flower__adding" onchange="changeCheckCheckBox(this, 3)">
                   <label for="flower__adding2">Шоколадку ( +3 BYN)</label></li>
                 <li>          
               </ul>
@@ -291,11 +318,11 @@
               <h3>Доставка*</h3>    
               <ul>
                 <li>                    
-                    <input type="radio" id="flower__transfer1" name="flower__transfer">
+                    <input type="radio" id="flower__transfer1" name="flower__transfer"  onchange="changeCheckRadio(this, 10)">
                     <label for="flower__transfer1">Курьером ( +10 BYN)</label>                    
                 </li>
                 <li>
-                  <input type="radio" id="flower__transfer2" name="flower__transfer">
+                  <input type="radio" id="flower__transfer2" name="flower__transfer"  onchange="changeCheckRadio(this, 0)">
                   <label for="flower__transfer2">Самовывоз</label></li> 
                                 
               </ul>
@@ -340,16 +367,18 @@
                 </p>
             </div>
             <div class="param__result">
-              <p>
+              <p id="resultCost">
                 0
               </p>
           </div>
           <div class="param__button">
             <input id="order" name="order" type="submit" value="Заказать"/>
-            <input id="clear" id="clear" type="button" value="Очистить"/>
+            <input id="clear" id="clear" type="button" value="Очистить" onclick="clearCheckedInput()"/>
           </div>
         </form>
         </div>
+
+        <a id="location__companyNumber__anchor"></a>
 
         <div class="location">
           <img class="location__map" src="assets/img/location/Map.png" alt="">
@@ -402,13 +431,13 @@
                                     
             
           </div>
-
-
-
             <img class="location__geotag" src="assets/img/location/geotag.png" alt="">
             <img class="location__geotagShadow" src="assets/img/location/shadow.png" alt="">
             
-            <img class="backToTop" src="assets/img/location/arrowtop.png" alt="">
+            <a href="#logo">
+              <img class="backToTop" src="assets/img/location/arrowtop.png" alt="">
+            </a>
+            
 
                 
         </div> 
@@ -440,16 +469,16 @@
           <div class="navigation__footer">
             <nav>
               <ul>
-                <li><a id="aboutCompany__footer" href="#thingOne"> О нас </a></li>
-                <li><a id="flowers__footer" href="#thingTwo"> Букеты </a></li>
-                <li><a id="coments__footer" href="#thingThree"> Отзывы </a></li>
+                <li><a id="aboutCompany__footer" href="#main__aboutUs__anchor"> О нас </a></li>
+                <li><a id="flowers__footer" href="#main__flowers__anchor"> Букеты </a></li>
+                <li><a id="coments__footer" href="#main__feedback__anchor"> Отзывы </a></li>
                 <li>
-                  <a id="transfer__footer" href="#thingThree">
+                  <a id="transfer__footer" href="#main__paidAndTransfer__anchor">
                     Доставка и оплата
                   </a>
                 </li>
-                <li><a id="contacts__footer" href="#thingThree"> Контакты </a></li>
-                <li><a id="phoneNumber__footer" href="#thingThree"> +375 (29) 123-45-67 </a></li>
+                <li><a id="contacts__footer" href="#location__companyNumber__anchor"> Контакты </a></li>
+                <li><a id="phoneNumber__footer" href=""> +375 (29) 123-45-67 </a></li>
               </ul>
             </nav>
           </div>
@@ -469,5 +498,7 @@
     });
     </script>
     <script src="assets/js/orderCall.js"></script>
+    <script src="assets/js/navHeader.js"></script>
+    <script src="assets/js/flowersChecked.js"></script>
   </body>
 </html>

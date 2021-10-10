@@ -168,6 +168,8 @@
         line-height: 22px;
     }
 
+    
+
     .main__feedback{
         margin-top: 50px;
     }
@@ -436,8 +438,8 @@
     }
 
     #addressTransfer{
-        font-size: 36px;
-        line-height: 44px;
+        font-size: 24px;
+        line-height: 29px;
     }
 
 
@@ -446,8 +448,8 @@
     }
 
     #coment{
-        font-size: 36px;
-        line-height: 44px;        
+        font-size: 24px;
+        line-height: 29px;       
     }
 
 
