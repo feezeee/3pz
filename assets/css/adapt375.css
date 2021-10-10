@@ -48,6 +48,7 @@
 
     .navigation__adapt__popup div ul
     {        
+        position:initial;
         margin: auto;
         margin-top: 40px;
         width: 160px;

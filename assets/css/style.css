@@ -152,6 +152,7 @@ border-spacing: 0;
 
 .navigation__adapt__popup div ul
 {
+    position: absolute;
     top: 21px;
     right: 49px;
     height: 100%;
