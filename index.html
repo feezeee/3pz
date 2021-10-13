@@ -252,18 +252,21 @@
               name="order__firstName"
               type="text"
               placeholder="Имя*"
+              required
             />
             <input
               id="order__lastName"
               name="order__lastName"
               type="text"
               placeholder="Фамилия*"
+              required
             />
             <input
               id="order__phoneNumber1"
               name="order__phoneNumber1"
               type="tel"
               placeholder="Телефон*"
+              required
             />            
             <div class="param__flower">
               <h3>Букет*</hз>
@@ -332,12 +335,12 @@
             <div class="param__transferDateTime">
               <div class="__date">
                 <h3>Дата доставки*</h3>          
-                <input type="date" id="dateTransfer" >                           
+                <input type="date" id="dateTransfer" required>                           
               </div>
               
               <div class="__time">
                 <h3>Время доставки*</h3>             
-                <select id="timeTransfer">
+                <select id="timeTransfer" required>
                   <option id="1">9:00-12:00</option>
                   <option id="2">12:00-15:00</option>
                   <option id="3">15:00-18:00</option>
@@ -354,6 +357,7 @@
               name="addressTransfer"
               type="text"
               placeholder="Адрес доставки*"
+              required
               />
             </div> 
             <div class="param__coment">
