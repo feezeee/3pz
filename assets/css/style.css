@@ -76,6 +76,7 @@ border-spacing: 0;
     align-items: center;
     height: 154px;
     background:#fff;
+    position: relative;
 }
 /* Логотип flowers */
 #logo{ 
@@ -84,17 +85,6 @@ border-spacing: 0;
     font-size: 72px;
     text-decoration: none;
     color: #424242;
-}
-/* Адаптивность для логотипа */
-@media screen and (max-width:768px) {
-    #logo {
-      font-size: 48px; 
-      margin-left: 46px;
-    }
-    .myHeader{
-        width: 768px;
-        height: 85px;
-    }
 }
 
 /* Устанавливаю стили для navigation */
@@ -118,26 +108,96 @@ border-spacing: 0;
     text-decoration: none;
 }
 
-@media screen and (max-width:768px) {
-    nav a {
-      font-size: 10px;      
-    }
+.navigation__adapt{
+    display: none;
+    cursor: pointer;
 }
 
-.main__chooseFlowers{
-    margin: auto;
-    width: 1440px;
-    position: relative;
-    
+.navigation__adapt__popup{  
+    position: absolute;  
+    top: 0px;
+    right: 0px;
+    width: 301px;
+    height: 369px;
+    background: #ffffff;
+    z-index: 3;
+    display: flex;
+    justify-content: right;
+    opacity: 0;
+    pointer-events: none;
 }
-.main__chooseFlowers img{
-    margin: auto;
+
+.navigation__adapt__popup.active {
+    opacity: 1;
+    pointer-events: all;
+    transition: 0.5s all;
+}
+
+.navigation__adapt__popup div{
+    position: relative; 
+    width: 100%;
+    height: 100%;
+}
+
+
+.navigation__adapt__popup div img
+{    
+    position: absolute;
+    top: 16px;
+    left: 18px;
+    height: 36px;
+    width: 36px;
+    cursor: pointer;
+}
+
+.navigation__adapt__popup div ul
+{
+    position: absolute;
+    top: 21px;
+    right: 49px;
+    height: 100%;
+    width: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+}
+
+.navigation__adapt__popup div ul li
+{    
+    text-align: right;
+    width: 140px;
+}
+.navigation__adapt__popup div ul li a
+{
+    font-family: "MontserratAlternates-Bold";
+    font-size: 22px;
+    line-height: 27px;
+    color: #424242;
+    text-decoration: none;
+}
+
+
+
+main{
     width: 1440px;
+    background-color: #fff;
+    margin: auto;
+}
+
+
+.main__chooseFlowers{
+    margin: auto;     
+    position: relative;   
+}
+.chooseFlowersImg{ 
+    width: 1440px;
+    height: 881px;
 }
 .information{
     font-family: "MontserratAlternates-Bold";
     font-size: 64px;    
     color: #424242;
+    line-height: 78px;
     position:absolute;
     top: 174px;
     left: 196px;
@@ -154,6 +214,7 @@ border-spacing: 0;
     border-radius: 20px;
     display: flex;
     
+    
 }
 .chooseFlowersBtn a{   
     margin: auto;
@@ -162,21 +223,11 @@ border-spacing: 0;
     text-decoration: none;
     color: #fff;
 }
-main{
-    width: 1440px;
-    background-color: #fff;
-    margin: auto;
-}
 
 /* О нас */
 .main__aboutUs
-{
-    margin: auto;
-    position: relative;   
-    margin-top: 90px; 
-    height: 346px; 
-    width: 1237px;
-    
+{ 
+    margin-top: 90px;     
 }
 .main__aboutUs h2{
     font-family: "MontserratAlternates-Bold";
@@ -187,29 +238,34 @@ main{
 
 .aboutUs__properties{    
     
-    position: absolute;
-    border: 1px solid black;
-    bottom: 0px;
-    right: 0px;
-    left: 0px;
+    width: 1237px; 
+    margin: auto;
+    margin-top: 55px;
     
 }
 .aboutUs__properties ul{
-    border: 1px solid red;
-
+    display: flex;
+    justify-content:space-between;
 }
 .aboutUs__properties ul li{
-    display: inline-block;    
+    text-align: center;  
 }
 .aboutUs__properties ul li div{
     display: inline-block;    
     text-align: center;
     
 }
+.aboutUs__properties ul li div img{
+    width: 190px;
+    height: 190px;    
+}
+
 .aboutUs__properties ul li p{
     font-family: "MontserratAlternates-Regular";
     font-size: 24px;    
     color: #424242;
+    margin-top: 30px;
+    line-height: 29px;
 }
 
 /* Виды цветов */
@@ -223,22 +279,23 @@ main{
     text-align: center;
 }
 
-.flowers__type{
-    position: relative;
+.flowers__type{ 
     margin: auto;
     margin-top: 55px;
-    width: 1237px;    
-    height: 1521px;
-    border: 1px solid red;
+    width: 1237px;   
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: space-between;  
+    row-gap:37px;  
 }
-.flowers__type ul{
-    position: absolute;
-}
-.flowers__type ul li {
-    display: inline-block;    
-    background-color: #EBEBEE;     
+
+.flowers__type li
+{    
+    background: #EBEBEE;
+    border-radius: 2px;    
     width: 385px;
-    height: 685px;    
+    height: 685px;
 }
 
 .flower__img 
@@ -270,6 +327,9 @@ main{
     margin-top: 29px; 
     display: flex; 
     justify-content: center;
+    background: #556867;
+    box-shadow: 0px 4px 4px rgba(43, 0, 0, 0.25);
+    border-radius: 20px;
 }
 .flower__offer a{
     font-family: "MontserratAlternates-Bold";
@@ -277,12 +337,13 @@ main{
     text-decoration: none;
     color: #fff;
     margin: auto;
+
 }
 
 /* Оплата и доставка */
 .main__paidAndTransfer
 {
-    margin-top: 90px;
+    margin-top: 90px;    
 }
 
 .main__paidAndTransfer h2{
@@ -293,14 +354,886 @@ main{
 }
 
 .paidAndTransfer__property{
-    position: relative;
+    
+    width: 1237px; 
     margin: auto;
     margin-top: 55px;
-    width: 1237px;    
-    height: 1521px;
-    border: 1px solid red;
+}
+.paidAndTransfer__property ul{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.paidAndTransfer__property ul li{
+.paidAndTransfer__property ul li{    
+    width: 318px;
+    text-align: center;
+}
+.paidAndTransfer__property ul li div img{
+    width: 190px;
+    height: 190px;
+}
+
+.property__h{
+    font-family: "MontserratAlternates-Bold";
+    font-size: 38px;    
+    color: #424242;
+}
+
+.property__inf{
+    margin-top: 30px;
+    font-family: "MontserratAlternates-Regular";
+    font-size: 24px;    
+    color: #000000;
+    line-height: 29px;
+}
+
+/* Отзывы */
+
+.main__feedback{
+    margin-top: 90px;
+}
+
+.main__feedback h2{
+    font-family: "MontserratAlternates-Bold";
+    font-size: 48px;    
+    color: #424242;
+    text-align: center;
+}
+
+.feedback__inf{
+    margin: auto;
+    margin-top: 55px;
+    width: 1176px;
+    display: flex;
+    justify-content:space-between;
+    position: relative;
+}
+.inf__users{
+    margin-left: 91px;    
+    width: 994px;
+    height: 549px;
+    background-color: #EBEBEE;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    
+}
+.__person
+{
+    position: relative;  
+    width: 385px; 
+    margin: 26px 0px 26px 48px;
+}
+
+.__person img {
+    position: absolute;
+    left: 105px;
+    top: 0px;
+    width: 174px;
+    height: 174px;
+    z-index: 2;
+}
+.textField
+{
+    background-color: #ffffff;
+    position: absolute;
+    height: 411px;
+    top: 86px;
+    width: 100%;
+    z-index: 1;    
+    box-shadow: 0px 4px 4px rgba(85, 104, 103, 0.25);
+}
+.firstLastName{
+
+    font-family: "MontserratAlternates-Bold";
+    font-size: 28px;    
+    color: #424242;
+    text-align: center;
+    line-height: 34px;
+    margin-top: 113px;
+}
+
+.textOfPerson{
+    font-family: "MontserratAlternates-Regular";
+    font-size: 28px;    
+    color: #424242;  
+    text-align: center;  
+    line-height: 34px;
+    margin-top: 34px;
+}
+
+.__imgProduct
+{
+    width: 507px;
+    height: 497px;
+    margin: 26px 31px 26px 0px;    
+    filter: drop-shadow(0px 4px 4px rgba(85, 104, 103, 0.25));
+    background-image: url(../img/feedback/person1/product.png);
+}
+
+
+
+/* Кнопка влево */
+.inf__left
+{   
+    position: absolute;
+    bottom: 263px;
+    left: 0px;
+    
+}
+#swipeToLeft
+{
+    width: 31px;
+    height: 62px;
+    cursor: pointer;
+}
+
+/* Кнопка вправо */
+.inf__right
+{    
+    position: absolute;
+    bottom: 263px;
+    right: 0px;
+}
+#swipeToRight{
+    width: 31px;
+    height: 62px;
+    cursor: pointer;
+}
+
+/* Оформить заказ */
+
+.main__order{
+    margin-top: 90px;
+}
+.main__order h2{
+    font-family: "MontserratAlternates-Bold";
+    font-size: 48px;    
+    line-height: 59px;
+    color: #424242;
+    text-align: center;
+}
+.order__param{
+    margin: auto;
+    margin-top: 55px;
+    width: 1058px;
+}
+
+#order__firstName{
+    width: 100%;
+    border: 0px;
+    border-bottom: 1px solid #000000;
+    font-family: "MontserratAlternates-Regular";
+    font-size: 36px;    
+    line-height: 44px;
+    color: #000000; 
+    text-transform: capitalize;  
+}
+#order__firstName::placeholder{
+    font-family: "MontserratAlternates-Regular";
+    font-size: 36px;   
+    line-height: 44px; 
+    color: #000000;
+    opacity: 0.5;
+}
+#order__firstName:focus::-webkit-input-placeholder {
+    color: transparent
+  }
+  
+#order__firstName:focus::-moz-placeholder {
+    color: transparent
+  }
+  
+#order__firstName:focus:-moz-placeholder {
+    color: transparent
+  }
+  
+#order__firstName:focus:-ms-input-placeholder {
+    color: transparent
+}
+
+
+#order__lastName{
+    margin-top: 93px;
+    width: 100%;
+    border: 0px;
+    border-bottom: 1px solid #000000;
+    font-family: "MontserratAlternates-Regular";
+    font-size: 36px;    
+    color: #000000;
+    text-transform: capitalize; 
+}
+#order__lastName::placeholder{
+    font-family: "MontserratAlternates-Regular";
+    font-size: 36px;    
+    color: #000000;
+    opacity: 0.5;
+}
+#order__lastName:focus::-webkit-input-placeholder {
+    color: transparent
+  }
+  
+#order__lastName:focus::-moz-placeholder {
+    color: transparent
+  }
+  
+#order__lastName:focus:-moz-placeholder {
+    color: transparent
+  }
+  
+#order__lastName:focus:-ms-input-placeholder {
+    color: transparent
+}
+
+#order__phoneNumber1{
+    margin-top: 93px;
+    width: 100%;
+    border: 0px;
+    border-bottom: 1px solid #000000;
+    font-family: "MontserratAlternates-Regular";
+    font-size: 36px;    
+    color: #000000;
+}
+#order__phoneNumber1::placeholder{
+    font-family: "MontserratAlternates-Regular";
+    font-size: 36px;    
+    color: #000000;
+    opacity: 0.5;
+}
+/* Доп параметры уточнения */
+.param__flower{
+    margin-top: 93px;
+}
+.param__flower h3{
+    font-family: "MontserratAlternates-Regular";
+    font-size: 36px;    
+    color: #000000;
+}
+.param__flower ul{    
+    margin-left: 21px;
+    margin-top: 19px;
+}
+.param__flower ul li{
+    width: 49%;
     display: inline-block;
 }
+
+.param__flower ul li label{
+    font-family: "MontserratAlternates-Regular";
+    font-size: 24px;    
+    color: #000000;  
+    line-height: 29px;
+}
+
+input[type=checkbox], input[type=radio]{
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+input[type=checkbox] + label
+{
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+}
+
+input[type=checkbox]+label::before {
+    content: '';
+    display: inline-block;
+    width: 34px;
+    height: 34px;    
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #000000;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+    box-sizing: border-box;    
+    margin-right: 32px;
+  }
+
+  input[type=checkbox]:checked+label::before {
+    
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAE/UlEQVR4Xu2dTchXRRSHH0EjBcVsU2AgEUSZGUEUhhqIixalYOoixRRLePMDWpi5bWHtNDPNMEpEUBRTlyqmiAiVX5nRqshFuIoMIdQoDt5XfV/v3M8zc+fee2bzX/xnzpw5z71z7u/OZWYEVkJGYB8wL+lwKzAwImTvPe/rK2DJsBjsNQBhror5wN60rgyAfwCPApeB8QbAf7DTejgKzHJ0vd3uAL9Q1gAbHV1cAZ4xAP4APAlcBB5I6eI/YBpwxgD4ATASOAtMcZj/GFgn/xkAPwAkwGsdpn8EngduGQA/wX8JOO24uG8AzwK/DHZtd4AuhHHAJeAxh1lJyp/c+58B0AWwE1jsMHkCeGX4fwZAD8BrwCGHuT+BycAfBkAv4PdaErX7E/CQw/zrwGFTwn6CL1a/BWY6zMu0NPwl3J2qNgXVh5KrdoFrrm4MQD0AhdRuVhcGoDqAwmrXAFQPclbLwmrXAOgDKKV2DYAugNJq1wDoAiitdg2AHoBKatcA6ACorHYNgA6AymrXANQHUEvtGoB6AGqrXQNQHYCK2jUA1QGoqF0DUA2Amto1AOUBqKpdA1AegKraNQDlAKirXQNQHIAXtWsAigPwonYNQDEA3tSuAcgH4FXtGoBsAN7VrgHIBuBd7RoAdwSCqF0DkB6BYGrXAKRHIJjaNQD3RyCo2jUAQyMQXO0agKERCK52DcDdCDSidg3A7Qg0pnYNADSqdg0ANKp2+w6gcbXbZwBRqN0+A4hC7fYVQDRqt48AolK7fQQQldrtG4Do1G6fAESpdvsCIFq12xcA0ardPgCIWu12HUD0arfrAKJXu10G0Aq121UArVG7XQXQGrVbFMDDwETgQlaDSP5bDWxy+CJ7MssGeX9H4mumG7Jh0xjgc2BRUlN2+54dsfNPJdvBu1ycDpyK2P8hrgmAA8DcYQ5/CqyKdBDngOccvm0A1kfqd6pbAkB28k4rbwD7IxvMR8D7Dp9kx1rXZtmRDeOuO1kAZA6dCvwaifcytZx0+PJPclfc2ZM5Ep9z3RAAspexa7qRhOy63XONK1YYm8z78pCQViQpb1bsL5gpATAK+C652tM6/gx4N5hH6R21Wu1mxW5w28pJyWkPcqWlFUnSBxuC0Hq1WwSA1JkDfOOoLPlA9r3/LTCETqjdogCk3jZghaOB5IMXgJsBIXRC7ZYB8CDwA/C0o9EWYGUgAK1a260ak7Sti59IXkeIQm4qH7RubVcTgNhaAOxpKB+0cm1XG4DY2w683UA+aOXarg8AefnAx/ui1q7t+gAgNkPmg1av7foCEDIfdFbtlnkMddX9AljuMR90Wu1qAMjLB/IiTF6IVSmdV7saAHzmg86rXS0APvJBL9SuJgCxtQNYppAPeqN2tQFIPvg++fIgzfZWYCAnGcj56rK65VpClKXHD6oklLa1qXqMVZ4++BJ4B/g3JSCPA0cA+U0rQ87bbVtAy/pbFYD08yawK6PDY8DXwPlkXfll4NXktNEJjnaytiuHHf9cdiBtrV8HgIxZrvSlioO/77xdRdtRmqoLYDRwHHhRYXS7k7tKwVR7TNQFICOVhCpfosnngFXLGWBG4NW2qr6qttMAIA7JnC75QOb4smUf8BZwvWzDLtTXAjAYi/eAD5PvTfPiI0e8rgPksbW3RRuABFI+bZFz1Rcmh9s/Akiu+Au4CvyePB1lPUH1Bsj/qKYpvtREtWsAAAAASUVORK5CYII=");
+  }
+
+
+
+  input[type=radio] + label{
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+}
+
+input[type=radio]+label::before {
+    content: '';
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #000000;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;    
+    margin-right: 29px;
+  }
+
+  input[type=radio]:not(:disabled):not(:checked)+label:hover::before {
+    border-color: #b3d7ff;
+  }
+
+  /* стили для радиокнопки, находящейся в фокусе и не находящейся в состоянии checked */
+  input[type=radio]:focus:not(:checked)+label::before {
+    border-color: #2c2c2c;
+  }
+
+  /* стили для радиокнопки, находящейся в состоянии checked */
+  input[type=radio]:checked+label::before {
+    border-color: black;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='8' height='8' viewBox='-4' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='4' cy='4' r='4' fill='black'/%3e%3c/svg%3e");
+  }
+
+  /* стили для радиокнопки, находящейся в состоянии disabled */
+  input[type=radio]:disabled+label::before {
+    background-color: #e9ecef;
+  }
+
+
+
+.param__decoration{
+    margin-top: 93px;
+}
+.param__decoration h3{
+    font-family: "MontserratAlternates-Regular";
+    font-size: 36px;    
+    color: #000000;
+}
+.param__decoration ul{    
+    margin-left: 21px;
+    margin-top: 21px;
+}
+.param__decoration ul li{
+    width: 49%;
+    display: inline-block;
+}
+.param__decoration ul li label{
+    font-family: "MontserratAlternates-Regular";
+    font-size: 24px;    
+    color: #000000;  
+    line-height: 29px;
+}
+
+
+
+.param__adding{
+    margin-top: 93px;
+}
+.param__adding h3{
+    font-family: "MontserratAlternates-Regular";
+    font-size: 36px;    
+    color: #000000;
+}
+
+.param__adding ul{    
+    margin-left: 21px;
+    margin-top: 21px;
+}
+.param__adding ul li{
+    width: 49%;
+    display: inline-block;
+}
+.param__adding ul li label{
+    font-family: "MontserratAlternates-Regular";
+    font-size: 24px;    
+    color: #000000;  
+    line-height: 29px;
+}
+
+
+
+.param__transfer{
+    margin-top: 93px;
+}
+.param__transfer h3{
+    font-family: "MontserratAlternates-Regular";
+    font-size: 36px;    
+    color: #000000;
+}
+
+.param__transfer ul{    
+    margin-left: 21px;
+    margin-top: 21px;
+}
+.param__transfer ul li{
+    width: 49%;
+    display: inline-block;
+}
+.param__transfer ul li label{
+    font-family: "MontserratAlternates-Regular";
+    font-size: 24px;    
+    color: #000000;  
+    line-height: 29px;
+}
+
+
+
+.param__transferDateTime
+{
+    margin-top: 95px;
+}
+.__date
+{
+    width: 50%;
+    display: inline-block;
+}
+.__date h3
+{
+    font-family: "MontserratAlternates-Regular";
+    font-size: 36px;    
+    color: #000000;
+}
+
+.__time
+{
+    width: 48%;
+    display: inline-block;
+}
+.__time h3
+{
+    font-family: "MontserratAlternates-Regular";
+    font-size: 36px;    
+    color: #000000;
+}
+
+
+
+#dateTransfer{
+    border: 0px;
+    border-bottom: 1px solid #000000;
+    width: 286px;
+    margin-top: 20px;
+    font-family: "MontserratAlternates-Regular";
+    font-size: 36px;    
+    color: #000000;
+    padding-right: 30px;
+    padding-left: 21px;
+    
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+    color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    display: block;
+    background-image: url("../img/Calendar.svg"); 
+    
+    width: 48px;
+    height: 40px;
+}
+
+#timeTransfer{
+    border: 0px;
+    border-bottom: 1px solid #000000;
+    width: 343px;
+    margin-top: 20px;
+    font-family: "MontserratAlternates-Regular";
+    font-size: 36px;    
+    color: #000000;
+}
+
+
+
+/* Адрес доставки */
+.param__addressTransfer{
+    width: 100%;
+    margin-top: 93px;
+}
+#addressTransfer{
+    border: 0px;
+    border-bottom: 1px solid #000000;
+    width: 100%;
+    margin-top: 20px;
+    font-family: "MontserratAlternates-Regular";
+    font-size: 36px;    
+    color: #000000;
+}
+
+
+
+.param__coment{
+    margin-top: 93px;
+}
+#coment{
+    
+    width: 100%;
+    height: 120px;
+    padding: 0;
+    font-family: "MontserratAlternates-Regular";
+    font-size: 36px;    
+    color: #000000;
+    
+}
+
+
+
+.param__text{
+    margin-top: 21px;
+}
+.param__text p{
+    font-family: "MontserratAlternates-Regular";
+    font-size: 18px;    
+    color: #000000;
+}
+
+.param__result{
+    
+    margin: 90px auto 0px auto;
+    width: 100%;
+    text-align: center;
+}
+.param__result p{
+    font-family: "MontserratAlternates-Bold";
+    font-size: 72px;    
+    color: #71A27C;
+    
+}
+
+.param__result p::before{
+    font-family: "MontserratAlternates-Bold";
+    font-size: 48px;    
+    color: #71A27C;
+    content: "Итого: ";
+
+}
+
+.param__result p::after{
+    font-family: "MontserratAlternates-Bold";
+    font-size: 72px;    
+    color: #71A27C;
+    content: " BYN";
+}
+
+
+
+.param__button{
+    margin-top: 55px;
+    text-align: center;
+    width: 100%;
+}
+#order{
+    background: #556867;
+    box-shadow: 0px 4px 4px rgba(113, 0, 0, 0.25);
+    border-radius: 20px;
+    width: 269px;
+    height: 96px;
+    font-family: "MontserratAlternates-Bold";
+    font-size: 36px;    
+    color: #ffffff;    
+    border: 0px;
+    cursor: pointer;
+}
+#clear{
+    background: #71A27C;
+    box-shadow: 0px 4px 4px rgba(43, 0, 0, 0.25);
+    border-radius: 20px;    
+    width: 269px;
+    height: 96px;
+    font-family: "MontserratAlternates-Bold";
+    font-size: 36px;    
+    color: #ffffff; 
+    margin-left: 76px;
+    border: 0px;
+    cursor: pointer;
+}
+
+
+
+
+.location{
+    margin-top: 90px;
+    width: 100%;    
+    position: relative;
+}
+.location__map{
+    width: 100%;
+    height: 772px;
+}
+.location__additionalParam{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 487px;
+    height: 471px;
+    background-color: #71A27C;
+}
+.location__address{
+    font-family: "MontserratAlternates-Regular";
+    font-size: 20px;    
+    color: #ffffff;
+    margin: 53px 0px 0px 95px;
+    display: inline-flex;
+    align-items: center;
+}
+.location__address::before{
+    content: '';
+    display: inline-block;
+    width: 28px;
+    height: 36px;
+    background-image: url(../img/location/inf/Geoloc.svg);  
+    margin-right: 25px;    
+}
+
+.location__companyNumber{
+    font-family: "MontserratAlternates-Regular";
+    font-size: 20px;    
+    color: #ffffff;
+    margin: 33px 0px 0px 95px;
+    display: inline-flex;
+    align-items: center;
+}
+.location__companyNumber::before{
+    content: '';
+    display: inline-block;
+    width: 26px;
+    height: 40px;
+    background-image: url(../img/location/inf/Phone.svg);  
+    margin-right: 25.5px;    
+}
+
+.location__messengers{
+    margin: 61px 0px 0px 95px;
+    max-width: 310px;
+}
+
+.location__messengers ul li{
+    display: inline-block;
+    width: 31%;
+    margin-bottom: 27px;
+}
+.location__messengers ul li div{
+    height: 34px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.location__viber img{
+    width: 30.03px;
+    height: 28.98px;
+}
+.location__telegram img{
+    width: 30.03px;
+    height: 23.28px;
+}
+
+.location__whatsApp img{
+    width: 33.23px;
+    height: 30.72px;
+}
+
+.location__instagram img{
+    width: 30px;
+    height: 27.71px;
+}
+.location__facebook img{
+    width: 30px;
+    height: 27.71px;
+}
+.location__vk img{
+    width: 36px;
+    height: 33.25px;
+}
+
+.location__orderCall{
+    position: absolute;
+    bottom: 52px;
+    left: 95px;
+    width: 310px;
+    height: 60px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(43, 0, 0, 0.25);
+    border-radius: 10px;
+    border: 0px;
+    font-family: "MontserratAlternates-Bold";
+    font-size: 24px;    
+    color: #71A27C; 
+    cursor: pointer;
+}
+
+.popupOrderPlace
+{
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.popupOrderPlace.active {
+    opacity: 1;
+    pointer-events: all;
+    transition: 0.5s all;
+}
+
+.OrderMenu
+{
+    position: relative;    
+    width: 821px;
+    height: 582px;
+    background: #EBEBEE;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+#orderClose
+{    
+    position: absolute;
+    top: 20px;
+    left: 768px;
+    width: 27.29px;
+    height: 27.29px;
+    cursor: pointer;
+}
+
+.OrderMenu h2
+{        
+    position: absolute;
+    text-align: center;
+    font-family: "MontserratAlternates-Bold";
+    font-size: 36px;
+    line-height: 44px;
+    top: 54px;
+    left: 252px;
+
+}
+
+
+.OrderMenu p
+{       
+    position: absolute; 
+    text-align: center;
+    font-family: "MontserratAlternates-Regular";
+    font-size: 24px;
+    line-height: 29px;
+    width: 510px;
+    top: 170px;
+    left: 156px;
+
+}
+
+
+#order__phoneNumber2{
+    position: absolute;
+    top: 283px;
+    left: 87px;
+    width: 648px;
+    border: 0px;
+    border-bottom: 1px solid #000000;
+    font-family: "MontserratAlternates-Regular";
+    font-size: 36px;    
+    color: #000000;
+    background-color: transparent;
+}
+#order__phoneNumber2::placeholder{
+    font-family: "MontserratAlternates-Regular";
+    font-size: 36px;    
+    color: #000000;
+    opacity: 0.5;
+}
+
+#makeOrder
+{
+    position: absolute;
+    top:423px;
+    left: 269px;   
+    width: 284px; 
+    height: 73px;
+    background: #556867;
+    border-radius: 20px;
+    border: 0;
+    font-family: "MontserratAlternates-Regular";
+    font-size: 24px;
+    line-height: 33px;   
+    color:#F4F5FF;
+    cursor: pointer;
+}
+
+
+.location__geotag{
+    position: absolute;
+    left: 599px;
+    top: 353px; 
+    z-index: 2;
+}
+
+.location__geotagShadow{
+    z-index: 1;
+    position: absolute;
+    left: 603px;
+    top: 487px;
+    width: 101px;
+    height: 14px;
+}
+.backToTop{
+    position: absolute;
+    left: 50px;
+    bottom: 42px;
+}
+
+
+/* Footer */
+.myfooter{
+    background-color: #556867;
+    height: 127px;
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+}
+
+#logo__footer{
+    margin-left: 102px;
+    font-family: "BilboSwashCaps-Regular";
+    font-size: 48px;
+    text-decoration: none;
+    color: #FFFFFF;
+    
+}
+.navigation__footer{    
+    margin-left: 124px;
+}
+
+.navigation__footer nav ul{
+    display: inline-flex;
+    align-items: center;
+}
+
+.navigation__footer nav ul li{
+   margin-right: 50px;
+   
+}
+
+.navigation__footer nav ul li a{
+    
+    font-family: "MontserratAlternates-Regular";
+    font-size: 18px;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+#phoneNumber__footer::before{
+    content: '';
+    display: inline-block;
+    width: 14px;
+    height: 20px;
+    background-image: url(../img/footer/phone.svg);  
+    margin-right: 13.75px; 
+}
+

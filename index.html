@@ -3,42 +3,65 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />    
+    <link rel="stylesheet" type="text/css" href="assets/css/adapt768.css"/> 
+    <link rel="stylesheet" type="text/css" href="assets/css/adapt375.css"/>
+    
     <title>Document</title>
   </head>
   <body>
     <div class="layout">
       <header class="myHeader">
-        <a id="logo" href=".">
+        <a id="logo" href="index.html">
           <span>Flowers</span>
         </a>
         <div class="navigation">
           <nav>
             <ul>
-              <li><a id="aboutCompany" href="#thingOne"> О нас </a></li>
-              <li><a id="flowers" href="#thingTwo"> Букеты </a></li>
-              <li><a id="Отзывы" href="#thingThree"> Отзывы </a></li>
+              <li><a id="aboutCompany__header" href="#main__aboutUs__anchor"> О нас </a></li>
+              <li><a id="flowers__header" href="#main__flowers__anchor"> Букеты </a></li>
+              <li><a id="coments__header" href="#main__feedback__anchor"> Отзывы </a></li>
               <li>
-                <a id="Доставка и оплата" href="#thingThree">
+                <a id="orderAndTransfer__header" href="#main__paidAndTransfer__anchor">
                   Доставка и оплата
                 </a>
               </li>
-              <li><a id="Контакты" href="#thingThree"> Контакты </a></li>
+              <li><a id="contacts__header" href="#location__companyNumber__anchor"> Контакты </a></li>
             </ul>
-          </nav>
+          </nav>          
+        </div> 
+        <div class="navigation__adapt">
+          <img id="navigationNavOpen" src="assets/adapt768/img/header/menu.svg" alt="">
+        </div> 
+        <div class="navigation__adapt__popup"> 
+          <div>                      
+            <img id="navigationNavClose" src="assets/img/header/Close.png" alt="">
+            <ul>
+              <li><a href="#main__aboutUs__anchor">О нас</a></li>
+              <li><a href="#main__flowers__anchor">Букеты</a></li>
+              <li><a href="#main__feedback__anchor">Отзывы</a></li>
+              <li><a href="#main__paidAndTransfer__anchor">Доставка
+                и оплата</a></li>
+              <li><a href="#location__companyNumber__anchor">Контакты</a></li>
+            </ul>
+          </div>
         </div>
-      </header>
+      </header>      
       <main>
         <div class="main__chooseFlowers">
-          <img src="assets/img/Rectangle_1440.png" alt="" />
+          <img class="chooseFlowersImg" src="assets/img/Rectangle_1440.png" alt="">
           <span class="information"
             >Быстрая доставка букетов<br />
             по всему Минску
           </span>
           <div class="chooseFlowersBtn">
-            <a href="">Выбрать букет</a>
+            <a href="#main__flowers__anchor">Выбрать букет</a>
           </div>
         </div>
+
+
+        
+        <a id="main__aboutUs__anchor"></a>
 
         <div class="main__aboutUs">
           <h2>О нас</h2>
@@ -64,7 +87,7 @@
               </li>
               <li>
                 <div>
-                  <img src="assets/img/aboutUs/fouth.svg" alt="" />
+                  <img src="assets/img/aboutUs/fourth.svg" alt="" />
                   <p>Быстрая<br />доставка</p>
                 </div>
               </li>
@@ -72,85 +95,77 @@
           </div>
         </div>
 
+
+        <a id="main__flowers__anchor"></a>
+
+
         <div class="main__flowers">
           <h2>Букеты</h2>
-          <div class="flowers__type">
-            <ul>
-              <li>
-                <div>
-                  <div class="flower__img">
-                    <img src="assets/img/sale/Softness_335.png" alt="" />
-                  </div>
-                  <p class="flower__params">Букет<br />“Нежность”</p>
-                  <p class="flower__price">100 BYN</p>
-                  <div class="flower__offer">
-                    <a href="">Заказать</a>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <div class="flower__img">
-                  <img src="assets/img/sale/Tenderness_335.png" alt="" />
-                </div>
-                  <p class="flower__params">Букет<br />"Ласка"</p>
-                  <p class="flower__price">150 BYN</p>
-                  <div class="flower__offer">
-                    <a href="">Заказать</a>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <div class="flower__img">
-                  <img src="assets/img/sale/Love_335.png" alt="" />
-                </div>
-                  <p class="flower__params">Букет<br />"Любовь"</p>
-                  <p class="flower__price">200 BYN</p>
-                  <div class="flower__offer">
-                    <a href="">Заказать</a>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <div class="flower__img">
-                  <img src="assets/img/sale/Original_335.png" alt="" />
-                  </div>
-                  <p class="flower__params">Букет<br />"Оригинальный"</p>
-                  <p class="flower__price">120 BYN</p>
-                  <div class="flower__offer">
-                    <a href="">Заказать</a>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <div class="flower__img">
-                  <img src="assets/img/sale/Smile_335.png" alt="" />
-                  </div>
-                  <p class="flower__params">Букет<br />"Улыбка"</p>
-                  <p class="flower__price">140 BYN</p>
-                  <div class="flower__offer">
-                    <a href="">Заказать</a>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <div class="flower__img">
-                    <img src="assets/img/sale/Kiss_335.png" alt="" />
-                  </div>
-                  <p class="flower__params">Букет<br />"Поцелуй"</p>
-                  <p class="flower__price">210 BYN</p>
-                  <div class="flower__offer">
-                    <a href="">Заказать</a>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
+          <ul class="flowers__type">
+            <li>
+              <div class="flower__img">
+                <img src="assets/img/sale/Softness_335.png" alt="" />
+              </div>
+              <p class="flower__params">Букет<br />“Нежность”</p>
+              <p class="flower__price">100 BYN</p>
+              <div class="flower__offer">
+                <a href="#__order">Заказать</a>
+              </div>
+            </li>
+            <li>
+              <div class="flower__img">
+                <img src="assets/img/sale/Tenderness_335.png" alt="" />
+              </div>
+              <p class="flower__params">Букет<br />"Ласка"</p>
+              <p class="flower__price">150 BYN</p>
+              <div class="flower__offer">
+                <a href="#__order">Заказать</a>
+              </div>
+            </li>
+            <li>
+              <div class="flower__img">
+                <img src="assets/img/sale/Love_335.png" alt="" />
+              </div>
+              <p class="flower__params">Букет<br />"Любовь"</p>
+              <p class="flower__price">200 BYN</p>
+              <div class="flower__offer">
+                <a href="#__order">Заказать</a>
+              </div>
+            </li>
+            <li>
+              <div class="flower__img">
+                <img src="assets/img/sale/Original_335.png" alt="" />
+              </div>
+              <p class="flower__params">Букет<br />"Оригинальный"</p>
+              <p class="flower__price">120 BYN</p>
+              <div class="flower__offer">
+                <a href="#__order">Заказать</a>
+              </div>
+            </li>
+            <li>
+              <div class="flower__img">
+                <img src="assets/img/sale/Smile_335.png" alt="" />
+              </div>
+              <p class="flower__params">Букет<br />"Улыбка"</p>
+              <p class="flower__price">140 BYN</p>
+              <div class="flower__offer">
+                <a href="#__order">Заказать</a>
+              </div>
+            </li>
+            <li>
+              <div class="flower__img">
+                <img src="assets/img/sale/Kiss_335.png" alt="" />
+              </div>
+              <p class="flower__params">Букет<br />"Поцелуй"</p>
+              <p class="flower__price">210 BYN</p>
+              <div class="flower__offer">
+                <a href="#__order">Заказать</a>
+              </div>
+            </li>
+          </ul>
         </div>
+
+        <a id="main__paidAndTransfer__anchor"></a>
 
         <div class="main__paidAndTransfer">
           <h2>Оплата и доставка</h2>
@@ -158,42 +173,336 @@
             <ul>
               <li>
                 <div>
-                  <img src="assets/img/paidAndTransfer/first.svg" alt="">
-                  <p class="property__h">
-                    Оплата
-                  </p>
-                  <p class="property_inf">
+                  <img src="assets/img/paidAndTransfer/first.svg" alt="" />
+                  <p class="property__h">Оплата</p>
+                  <p class="property__inf">
                     Оплатить заказ можно при получении либо в пункте самовывоза
                   </p>
                 </div>
               </li>
-              <li> 
+              <li>
                 <div>
-                <img src="assets/img/paidAndTransfer/second.svg" alt="">
-                <p class="property__h">
-                  Доставка
-                </p>
-                <p class="property_inf">
-                  Доставим в любую точку Минска в течение дня
-                </p>
-
-              </div>
+                  <img src="assets/img/paidAndTransfer/second.svg" alt="" />
+                  <p class="property__h">Доставка</p>
+                  <p class="property__inf">
+                    Доставим в любую точку Минска в течение дня
+                  </p>
+                </div>
               </li>
               <li>
                 <div>
-                  <img src="assets/img/paidAndTransfer/third.svg" alt="">
-                  <p class="property__h">
-                    Доставка
+                  <img src="assets/img/paidAndTransfer/third.svg" alt="" />
+                  <p class="property__h">Самовывоз</p>
+                  <p class="property__inf">
+                    Вы можете забрать букет самостоятельно по адресу г. Минск,
+                    ул. Белая 1
                   </p>
-                  <p class="property_inf">
-                    Вы можете забрать букет самостоятельно по адресу г. Минск, ул. Белая 1
-                  </p>  
                 </div>
               </li>
             </ul>
           </div>
         </div>
-      </main>
-    </div>
+
+        <a id="main__feedback__anchor"></a>
+
+
+        <div class="main__feedback">
+          <h2>Отзывы</h2>
+          <div class="feedback__inf">
+            <div class="inf__left">              
+                <img
+                  id="swipeToLeft"
+                  src="assets/img/feedback/left.svg"
+                  alt=""
+                />              
+            </div>
+            <div class="inf__users">
+              <div class="__person">
+                  <img src="assets/img/feedback/person1/person.png" alt="">
+                  <div class="textField">
+                    <p class="firstLastName">Анастасия<br/>Иванова</p>
+                    <p class="textOfPerson">
+                      Спасибо за чудесный букет! Все пришло вовремя)
+                    </p>
+                  </div>
+              </div>
+              <div class="__imgProduct">
+                
+              </div>
+            </div>
+            <div class="inf__right">              
+                <img
+                  id="swipeToRight"
+                  src="assets/img/feedback/right.svg"
+                  alt=""
+                />
+                              
+            </div>
+          </div>
+        </div>       
+        
+        <a id="__order"></a>
+
+        <div class="main__order">
+          <h2>Оформить заказ</h2>
+          <form action="">
+          <div class="order__param">
+            <input
+              id="order__firstName"
+              name="order__firstName"
+              type="text"
+              placeholder="Имя*"
+              required
+            />
+            <input
+              id="order__lastName"
+              name="order__lastName"
+              type="text"
+              placeholder="Фамилия*"
+              required
+            />
+            <input
+              id="order__phoneNumber1"
+              name="order__phoneNumber1"
+              type="tel"
+              placeholder="Телефон*"
+              required
+            />            
+            <div class="param__flower">
+              <h3>Букет*</hз>
+                <ul>
+                  <li>                    
+                      <input type="checkbox" id="flower__scales1" name="flower__scales" onchange="changeCheckCheckBox(this, 100)">
+                      <label for="flower__scales1">Нежность  100 BYN</label>                    
+                  </li>
+                  <li>
+                    <input type="checkbox" id="flower__scales2" name="flower__scales" onchange="changeCheckCheckBox(this, 150)">
+                    <label for="flower__scales2">Ласка 150 BYN</label></li>
+                  <li>
+                    <input type="checkbox" id="flower__scales3" name="flower__scales" onchange="changeCheckCheckBox(this, 200)">
+                    <label for="flower__scales3">Любовь 200 BYN</label></li>
+                  <li><input type="checkbox" id="flower__scales4" name="flower__scales" onchange="changeCheckCheckBox(this, 120)">
+                      <label for="flower__scales4">Оригинальный 120 BYN</label></li>
+                  <li><input type="checkbox" id="flower__scales5" name="flower__scales" onchange="changeCheckCheckBox(this, 140)">
+                      <label for="flower__scales5">Улыбка 140 BYN</label></li>
+                  <li><input type="checkbox" id="flower__scales6" name="flower__scales" onchange="changeCheckCheckBox(this, 210)">
+                      <label for="flower__scales6">Поцелуй 210 BYN</label></li>
+                     
+                </ul>
+            </div>    
+            <div class="param__decoration">
+              <h3>Букет оформить в*</h3>
+              <ul>
+                <li>                    
+                    <input type="radio" id="flower__decoration1" name="flower__decoration" onchange="changeCheckRadio(this, 2)">
+                    <label for="flower__decoration1">Коробку ( +2 BYN)</label>                    
+                </li>
+                <li>
+                  <input type="radio" id="flower__decoration2" name="flower__decoration" onchange="changeCheckRadio(this, 0)">
+                  <label for="flower__decoration2">Флористическую бумагу</label></li> 
+                                
+              </ul>
+
+            </div>    
+            <div class="param__adding">
+              <h3>К букету добавить</h3>
+              <ul>
+                <li>                    
+                  <input type="checkbox" id="flower__adding1" name="flower__adding" onchange="changeCheckCheckBox(this, 1)">
+                  <label for="flower__adding1">Открытку ( +1 BYN)</label>                    
+                </li>
+                <li>
+                  <input type="checkbox" id="flower__adding2" name="flower__adding" onchange="changeCheckCheckBox(this, 3)">
+                  <label for="flower__adding2">Шоколадку ( +3 BYN)</label></li>
+                <li>          
+              </ul>
+            </div>    
+            <div class="param__transfer">
+              <h3>Доставка*</h3>    
+              <ul>
+                <li>                    
+                    <input type="radio" id="flower__transfer1" name="flower__transfer"  onchange="changeCheckRadio(this, 10)">
+                    <label for="flower__transfer1">Курьером ( +10 BYN)</label>                    
+                </li>
+                <li>
+                  <input type="radio" id="flower__transfer2" name="flower__transfer"  onchange="changeCheckRadio(this, 0)">
+                  <label for="flower__transfer2">Самовывоз</label></li> 
+                                
+              </ul>
+            </div> 
+            
+            
+            <div class="param__transferDateTime">
+              <div class="__date">
+                <h3>Дата доставки*</h3>          
+                <input type="date" id="dateTransfer" required>                           
+              </div>
+              
+              <div class="__time">
+                <h3>Время доставки*</h3>             
+                <select id="timeTransfer" required>
+                  <option id="1">9:00-12:00</option>
+                  <option id="2">12:00-15:00</option>
+                  <option id="3">15:00-18:00</option>
+                  <option id="4">18:00-21:00</option>
+                  <option id="5">21:00-00:00</option>
+                </select>    
+                                
+              </div>
+            </div>    
+
+            <div class="param__addressTransfer">
+              <input
+              id="addressTransfer"
+              name="addressTransfer"
+              type="text"
+              placeholder="Адрес доставки*"
+              required
+              />
+            </div> 
+            <div class="param__coment">
+              <textarea id="coment" name="coment" placeholder="Комментарий к заказу"></textarea>
+              
+            </div> 
+
+            <div class="param__text">
+                <p>
+                  * обязательно для заполнения
+                </p>
+            </div>
+            <div class="param__result">
+              <p id="resultCost">
+                0
+              </p>
+          </div>
+          <div class="param__button">
+            <input id="order" name="order" type="submit" value="Заказать"/>
+            <input id="clear" id="clear" type="button" value="Очистить" onclick="clearCheckedInput()"/>
+          </div>
+        </form>
+        </div>
+
+        <a id="location__companyNumber__anchor"></a>
+
+        <div class="location">
+          <img class="location__map" src="assets/img/location/Map.png" alt="">
+          <div class="location__additionalParam">
+            <p class="location__address">
+              г. Минск, ул. Белая 1
+            </p>
+            <p class="location__companyNumber">
+              +375 (29) 123-45-67
+            </p>
+            <div class="location__messengers">
+              <ul>
+                <li>
+                  <div class="location__viber">
+                    <img src="assets/img/location/inf/Viber.png" alt="">
+                  </div>
+                </li>
+                <li>
+                  <div class="location__telegram">
+                    <img src="assets/img/location/inf/Telegram.png" alt="">
+                  </div>
+                </li>
+                <li>
+                  <div class="location__whatsApp">
+                    <img src="assets/img/location/inf/WhatsApp.png" alt="">
+                  </div>
+                </li>         
+                <li>
+                  <div class="location__instagram">
+                    <img src="assets/img/location/inf/Instagram.png" alt="">
+                  </div>
+                </li>   
+                <li>
+                  <div class="location__facebook">
+                    <img src="assets/img/location/inf/Facebook.png" alt="">
+                  </div>
+                </li> 
+                <li>
+                  <div class="location__vk">
+                    <img src="assets/img/location/inf/Vk.png" alt="">
+                  </div>
+                </li>    
+              </ul>   
+            </div>
+
+            <button class="location__orderCall" id="orderCall">
+              Заказать звонок
+            </button>
+
+                                    
+            
+          </div>
+            <img class="location__geotag" src="assets/img/location/geotag.png" alt="">
+            <img class="location__geotagShadow" src="assets/img/location/shadow.png" alt="">
+            
+            <a href="#logo">
+              <img class="backToTop" src="assets/img/location/arrowtop.png" alt="">
+            </a>
+            
+
+                
+        </div> 
+
+        <div class="popupOrderPlace"> 
+          <form>
+            <div class="OrderMenu">          
+                <img id="orderClose" src="assets/img/location/inf/Close.png" alt=""/>
+                <h2>Заказать звонок</h2>
+                <p>Оставьте свой номер телефона, и мы
+                  перезвоним Вам. 
+                </p>
+                <input
+                    id="order__phoneNumber2"
+                    name="order__phoneNumber2"
+                    type="tel"                    
+                    placeholder="Телефон*"/>     
+                 <button id="makeOrder">
+                  Заказать звонок
+                 </button>   
+          </div> 
+        </form>        
+      </div>  
+        
+        <footer class="myfooter">
+          <a id="logo__footer" href="index.html">
+            <span>Flowers</span>
+          </a>
+          <div class="navigation__footer">
+            <nav>
+              <ul>
+                <li><a id="aboutCompany__footer" href="#main__aboutUs__anchor"> О нас </a></li>
+                <li><a id="flowers__footer" href="#main__flowers__anchor"> Букеты </a></li>
+                <li><a id="coments__footer" href="#main__feedback__anchor"> Отзывы </a></li>
+                <li>
+                  <a id="transfer__footer" href="#main__paidAndTransfer__anchor">
+                    Доставка и оплата
+                  </a>
+                </li>
+                <li><a id="contacts__footer" href="#location__companyNumber__anchor"> Контакты </a></li>
+                <li><a id="phoneNumber__footer" href=""> +375 (29) 123-45-67 </a></li>
+              </ul>
+            </nav>
+          </div>
+        </footer>             
+      </main>      
+    </div>    
+    <!-- Подключение библиотеки jQuery -->
+    <script src="assets/js/jquery.js"></script>
+    <!-- Подключение jQuery плагина Masked Input -->
+    <script src="assets/js/jquery.maskedinput.min.js"></script>
+    <script src="assets/js/dateTransfer.js"></script>  
+    <script src="assets/js/timeTransfer.js"></script> 
+    <script>
+      $(document).ready(function() {
+      $("#order__phoneNumber1").mask("+375(99) 999-99-99");
+      $("#order__phoneNumber2").mask("+375(99) 999-99-99");
+    });
+    </script>
+    <script src="assets/js/orderCall.js"></script>
+    <script src="assets/js/navHeader.js"></script>
+    <script src="assets/js/flowersChecked.js"></script>
   </body>
 </html>

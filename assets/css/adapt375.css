@@ -1,0 +1,802 @@
+@media screen and (max-width:400px) 
+{    
+    .myHeader{
+        width: 375px;
+        height: 60px;
+        justify-content: space-between;
+    }
+
+    #logo 
+    {
+        font-size: 30px;
+        line-height: 37px;
+        margin-left: 13px;
+    }
+    .navigation{
+        display: none;
+    }
+    .navigation__adapt
+    {
+        display:flex;
+        margin-right: 13px;
+    }
+    #navigationNavOpen
+    {
+        width: 33px;
+        height: 27px;
+    }
+
+    
+    .navigation__adapt__popup{ 
+        width: 375px;
+        height: 407px;
+    }
+
+    .navigation__adapt__popup.active {
+        opacity: 1;
+        pointer-events: all;
+        transition: 0.5s all;
+    }
+
+    .navigation__adapt__popup div img
+    {    
+        top: 25px;
+        left: 313px;
+        height: 36px;
+        width: 36px;
+    }
+
+    .navigation__adapt__popup div ul
+    {        
+        position:initial;
+        margin: auto;
+        margin-top: 40px;
+        width: 160px;
+        justify-content: center;  
+    }
+    .navigation__adapt__popup div ul li{
+        height: fit-content;
+        text-align: center;
+    }
+
+    .navigation__adapt__popup div ul li a
+    {
+        font-size: 22px;
+        line-height: 27px;
+    }
+
+
+    main{
+        width: 375px;
+    }
+
+    .chooseFlowersImg
+    {
+        width: 375px;
+        height: 407px;
+    }
+
+    .information{
+        top: 47px;
+        left: 23px;
+        font-size: 30px;
+        line-height: 37px;
+    }
+    .chooseFlowersBtn{
+        top: 209px;
+        left: 50px;
+        width: 262px;
+        height: 54px;
+    }
+    .chooseFlowersBtn a{   
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+
+
+    .main__aboutUs{
+        margin-top: 30px; 
+    }
+
+    .main__aboutUs h2{
+        font-size: 24px;
+        line-height: 29px;    
+    }
+
+    .aboutUs__properties{
+        width: 309px;
+        margin-top: 9px;
+    }
+    .aboutUs__properties ul{
+        display: flex;
+        flex-direction: row;
+        flex-wrap:wrap;
+        justify-content: space-between;  
+        row-gap:20px;  
+    }
+
+    .aboutUs__properties ul li{
+        width: 120px;
+    }
+    .aboutUs__properties ul li div img{
+        width: 100px;
+        height: 100px;    
+    }
+
+    .aboutUs__properties ul li p{
+        font-size: 12px;
+        line-height: 15px;
+        margin-top: 6px;
+    }
+    
+
+    
+    
+    .main__flowers{
+        margin-top: 30px;
+    }
+    .main__flowers h2{
+        font-size: 24px;
+        line-height: 29px; 
+    }
+    .flowers__type{
+        margin-top: 30px;
+        width: 310px;    
+        row-gap: 10px;  
+    }
+
+    .flowers__type li
+    {    
+        background: #EBEBEE;
+        border-radius: 2px;    
+        width: 148px;
+        height: 264px;
+    }
+
+    
+    .flower__img 
+    {     
+        text-align: center;
+        margin-top: 8px;
+    }
+    .flower__img img
+    {     
+        width: 128px;
+        height: 130px;
+    }
+
+    .flower__params
+    {       
+        margin-top: 12px;
+        font-size: 12px;
+        line-height: 15px; 
+    }
+
+    .flower__price{
+        margin-top: 10px;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    
+    .flower__offer{
+        margin-top: 12px;
+        width: 115px;
+        height: 29px;
+    }
+
+    .flower__offer a{
+        font-size: 14px;
+        line-height: 17px;   
+    }
+
+
+
+    
+    .main__paidAndTransfer{
+        margin-top: 30px; 
+    }
+    
+    .main__paidAndTransfer h2{
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    .paidAndTransfer__property{
+        width: 276px;
+        margin-top: 10px;
+    }
+    .paidAndTransfer__property ul{
+        row-gap: 20px;
+        justify-content: center;
+    }
+    .paidAndTransfer__property ul li{    
+        width: 240px;
+    }
+
+    .paidAndTransfer__property ul li div img{
+        width: 100px;
+        height: 100px;
+    }
+
+    .property__h
+    {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .property__inf{
+        margin-top: 1px;
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+
+
+    
+    .main__feedback{
+        margin-top: 30px;
+    }
+
+    .main__feedback h2{
+        font-size: 24px;
+        line-height: 29px; 
+    }
+
+    .feedback__inf{
+        width: 348px;
+        margin-top: 12px;
+    }
+
+    .inf__users{
+        width: 283px;
+        height: 500px;   
+        margin-left: 31px; 
+    }
+
+    .__person
+    {
+        width: 243px;
+        height: 209px;
+        margin: 15px 20px 0px 20px;
+        row-gap: 18px;
+    }
+
+    .__person img {
+        position: absolute;
+        left: 81px;
+        top: 0px;
+        width: 80px;
+        height: 80px;
+        z-index: 2;
+    }
+
+    .textField{
+        width: 243px;
+        height: 169px;
+        position: absolute;
+        top: 40px;
+    }
+
+    .firstLastName{
+        font-size: 18px;
+        line-height: 22px; 
+        margin-top: 49px;  
+        margin-left: 32px;  
+        width: 178px;
+    }
+
+    .textOfPerson{
+        font-size: 14px;
+        line-height: 17px;    
+        margin-top: 9px;  
+        margin-left: 13px;  
+        width: 217px;    
+    }
+
+    .__imgProduct{
+        width: 243px;
+        height: 243px;
+        margin: 0px 20px 15px 20px; 
+        background-image: url("../img/feedback/person1/product375.png");           
+    }
+
+    
+    .inf__left
+    {
+        bottom: 250px;
+        left: 0px;
+    }
+
+    #swipeToLeft
+    {
+        width: 9px;
+        height: 18px;
+    }
+
+    .inf__right
+    {
+        bottom: 250px;
+        right: 0px;
+    }
+
+    #swipeToRight{
+        width: 9px;
+        height: 18px;
+    }
+
+
+
+    
+    .main__order{
+        margin-top: 30px;
+    }
+
+    .main__order h2{
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    .order__param{
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-top: 15px;
+        width: 275px;
+    }
+
+    
+    #order__firstName{
+        
+        font-size: 14px;
+        line-height: 17px;
+    }
+    
+    #order__firstName::placeholder{
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+        
+    #order__lastName{
+        margin-top: 30px;
+        font-size: 14px;
+        line-height: 17px;
+    }
+    #order__lastName::placeholder{
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    
+    #order__phoneNumber1{
+        margin-top: 30px;
+        font-size: 14px;
+        line-height: 17px;
+    }
+    #order__phoneNumber1::placeholder{
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+
+    input[type=radio]+label::before {        
+        width: 22px;
+        height: 22px;
+        margin-right: 22px;
+    }
+
+    input[type=checkbox]+label::before {        
+        width: 22px;
+        height: 22px;
+        margin-right: 22px;
+    }
+    
+    .param__flower{
+        margin-top: 19px;
+    }
+
+    .param__flower h3{
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    .param__flower ul{    
+        margin-left: 14px;
+        margin-top: 10px;
+    }
+
+    .param__flower ul li{
+        width: 95%;
+    }
+
+    .param__flower ul li label{
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+
+
+
+    .param__decoration{
+        margin-top: 19px;
+    }
+
+    .param__decoration h3{
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    .param__decoration ul{    
+        margin-left: 14px;
+        margin-top: 10px;
+    }
+
+    .param__decoration ul li{
+        width: 95%;
+    }
+
+    .param__decoration ul li label{
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+
+
+    .param__adding{
+        margin-top: 19px;
+    }
+
+    .param__adding h3{
+        font-size: 14px;
+        line-height: 17px;
+    }
+    
+    .param__adding ul{    
+        margin-left: 14px;
+        margin-top: 10px;
+    }
+
+    .param__adding ul li{
+        width: 95%;
+    }
+
+    .param__adding ul li label{
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+
+
+    .param__transfer{
+        margin-top: 19px;
+    }
+    .param__transfer h3{
+        font-size: 14px;
+        line-height: 17px;
+    }
+    
+    .param__transfer ul{    
+        margin-left: 14px;
+        margin-top: 10px;
+    }
+
+    .param__transfer ul li{
+        width: 95%;
+    }
+
+    .param__transfer ul li label{
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+
+    
+    .param__transferDateTime{
+        margin-top: 19px;
+    }
+
+    .__date
+    {
+        width: 95%;
+    }
+
+    .__date h3{
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    .__time h3
+    {
+        margin-top: 19px;
+        font-size: 14px;
+        line-height: 17px;
+        width: 150px;
+    }
+
+
+    #dateTransfer{
+        margin-top: 6px;
+        width: 224px;
+        font-size: 14px;
+        line-height: 17px;
+        padding-right: 13px;
+        padding-left: 8px;
+    }
+
+    input[type="date"]::-webkit-calendar-picker-indicator {       
+           
+        width: 15px;
+        height: 15px;
+    }
+
+    #timeTransfer{
+        margin-top: 6px;
+        width: 224px;
+        font-size: 14px;
+        line-height: 17px;
+        padding-right: 13px;
+        padding-left: 8px;
+    }
+
+
+    
+    .param__addressTransfer{        
+        margin-top: 19px;
+    }
+
+    #addressTransfer{
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+
+    .param__coment{
+        margin-top: 19px;
+    }
+
+    #coment{
+        font-size: 14px;
+        line-height: 17px;
+        width: 244px;
+        height: 76px;      
+    }
+
+
+    
+    .param__text{
+        margin-top: 14px;
+    }
+    .param__text p{
+        font-size: 10px;
+        line-height: 12px;
+    }
+
+
+    .param__result{
+    
+        margin-top: 17px;        
+        margin-bottom: 0px; 
+    }
+    .param__result p{
+        font-size: 24px;
+        line-height: 29px;    
+    }
+
+    .param__result p::before{
+        font-size: 24px;
+        line-height: 29px;
+    }
+    
+    .param__result p::after{
+        font-size: 24px;
+line-height: 29px;
+    }
+
+
+
+    
+    .param__button{
+        margin-top: 12px;
+    }
+
+    #order{
+        
+        width: 112px;
+        height: 34px;
+        font-size: 13px;
+        line-height: 16px;
+    }
+    #clear{
+        width: 122px;
+        height: 34px;
+        font-size: 13px;
+        line-height: 16px;
+        margin-left: 34px;
+    }
+    
+
+    
+    .location{
+        margin-top: 30px;
+        overflow: hidden;
+    }
+    
+    .location__map{
+        display: block;
+        width: 100%;
+        height: 292px;
+        object-fit: fill;
+    }
+
+
+    .location__additionalParam{
+        position: relative;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 141px;
+        background-color: #71A27C;
+    }
+
+    .location__address{
+        font-size: 11px;
+        line-height: 13px;
+        margin: 15px 0px 0px 23px;
+    }
+
+    .location__address::before{        
+        width: 13px;
+        height: 16px;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='13' height='16' viewBox='0 0 13 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M6.02876 15.8513C6.16627 15.948 6.33102 16 6.5 16C6.66898 16 6.83373 15.948 6.97124 15.8513C7.21824 15.6793 13.0235 11.5521 12.9999 6.40005C12.9999 2.87122 10.0839 0 6.5 0C2.9161 0 7.15299e-05 2.87122 7.15299e-05 6.39605C-0.0234907 11.5521 5.78176 15.6793 6.02876 15.8513ZM6.5 1.60001C9.18853 1.60001 11.3749 3.75283 11.3749 6.40405C11.392 9.95448 7.80974 13.1425 6.5 14.1881C5.19108 13.1417 1.60799 9.95288 1.62505 6.40005C1.62505 3.75283 3.81147 1.60001 6.5 1.60001Z' fill='white'/%3e%3c/svg%3e ");
+        margin-right: 18px;            
+    }
+
+    .location__companyNumber{
+        font-size: 11px;
+        line-height: 13px;
+        margin: 17px 0px 0px 53px;
+    }
+    .location__companyNumber::before{        
+        width: 10px;
+        height: 17px;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='10' height='17' viewBox='0 0 10 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M8 1.01573H2C1.73478 1.01573 1.48043 1.12274 1.29289 1.31323C1.10536 1.50371 1 1.76207 1 2.03146V14.2202C1 14.4896 1.10536 14.7479 1.29289 14.9384C1.48043 15.1289 1.73478 15.2359 2 15.2359H8C8.26522 15.2359 8.51957 15.1289 8.70711 14.9384C8.89464 14.7479 9 14.4896 9 14.2202V2.03146C9 1.76207 8.89464 1.50371 8.70711 1.31323C8.51957 1.12274 8.26522 1.01573 8 1.01573ZM2 0C1.46957 0 0.960859 0.214028 0.585786 0.595C0.210714 0.975972 0 1.49268 0 2.03146V14.2202C0 14.759 0.210714 15.2757 0.585786 15.6567C0.960859 16.0376 1.46957 16.2517 2 16.2517H8C8.53043 16.2517 9.03914 16.0376 9.41421 15.6567C9.78929 15.2757 10 14.759 10 14.2202V2.03146C10 1.49268 9.78929 0.975972 9.41421 0.595C9.03914 0.214028 8.53043 0 8 0L2 0Z' fill='white'/%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M4.99999 14.2203C5.26521 14.2203 5.51956 14.1132 5.70709 13.9227C5.89463 13.7322 5.99998 13.4738 5.99998 13.2044C5.99998 12.9349 5.89463 12.6765 5.70709 12.486C5.51956 12.2955 5.26521 12.1885 4.99999 12.1885C4.73478 12.1885 4.48043 12.2955 4.29289 12.486C4.10536 12.6765 4 12.9349 4 13.2044C4 13.4738 4.10536 13.7322 4.29289 13.9227C4.48043 14.1132 4.73478 14.2203 4.99999 14.2203Z' fill='white'/%3e%3c/svg%3e ");
+        margin-right: 15px;            
+    }
+
+
+    
+    .location__messengers{
+        margin: 24px 0px 0px 23px;
+        max-width: 323px;
+    }
+
+    .location__messengers ul
+    {
+        display: flex;
+        justify-content: space-between;
+    }  
+
+
+    .location__messengers ul li{  
+        width: 20px;
+    }
+    .location__messengers ul li div{
+        height: 19px;
+    }
+
+    
+    .location__orderCall{
+        
+        bottom: 20px;
+        left: 99px;
+        width: 170px;
+        height: 28px;
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    .OrderMenu
+    {
+        position: relative;    
+        width: 301px;
+        height: 214px;
+        background: #EBEBEE;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+    }
+
+    #orderClose
+    {    
+        position: absolute;
+        top: 7px;
+        left: 282px;
+        width: 10px;
+        height: 10px;
+    }
+
+    
+    .OrderMenu h2
+    {        
+        font-size: 20px;
+        line-height: 24px;
+        top: 20px;
+        left: 54px;
+
+    }
+
+
+    .OrderMenu p
+    {       
+        font-size: 12px;
+        line-height: 15px;
+        width: 245px;
+        top: 63px;
+        left: 27px;
+    }
+
+    
+    #order__phoneNumber2{        
+        top: 104px;
+        left: 32px;
+        width: 238px;
+        font-size: 13px;
+        line-height: 16px;
+    }
+    #order__phoneNumber2::placeholder{
+        font-size: 13px;
+        line-height: 16px;
+    }
+
+    #makeOrder
+    {        
+        top:156px;
+        left: 81px;   
+        width: 139px; 
+        height: 26px;
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+
+    
+    .location__geotag{
+        left: 154px;
+        top: 131px;
+        width: 34px;
+        height: 46px;
+    }
+
+    .location__geotagShadow{
+        left: 155px;
+        top: 174px;
+        width: 32px;
+        height: 5px;
+    }
+    .backToTop{
+        width: 47px;
+        height: 47px;
+        left: 18px;
+        top: 230px;
+    }
+
+    
+    .myfooter{
+        height: 73px;
+        justify-content: center;
+    }
+
+    #logo__footer{
+        margin: 0px;
+        font-size: 36px;
+        line-height: 45px;        
+    }
+
+    .navigation__footer
+    {
+        display: none;
+    }
+
+
+    
+}
