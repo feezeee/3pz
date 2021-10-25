@@ -290,47 +290,46 @@
                       
                   </ul>
               </div>    
-            <div class="param__decoration">
-              <h3>Букет оформить в*</h3>
-              <ul>
-                <li>                    
-                    <input type="radio" id="flower__decoration1" name="flower__decoration" onchange="changeCheckRadio(this, 2)">
-                    <label for="flower__decoration1">Коробку ( +2 BYN)</label>                    
-                </li>
-                <li>
-                  <input type="radio" id="flower__decoration2" name="flower__decoration" onchange="changeCheckRadio(this, 0)">
-                  <label for="flower__decoration2">Флористическую бумагу</label></li> 
-                                
-              </ul>
+              <div class="param__decoration">
+                <h3>Букет оформить в*</h3>
+                <ul>
+                  <li>                    
+                      <input type="radio" id="flower__decoration1" name="flower__decoration" onchange="changeCheckRadio(this, 2)">
+                      <label for="flower__decoration1">Коробку ( +2 BYN)</label>                    
+                  </li>
+                  <li>
+                    <input type="radio" id="flower__decoration2" name="flower__decoration" onchange="changeCheckRadio(this, 0)">
+                    <label for="flower__decoration2">Флористическую бумагу</label></li> 
+                                  
+                </ul>
 
-            </div>    
-            <div class="param__adding">
-              <h3>К букету добавить</h3>
-              <ul>
-                <li>                    
-                  <input type="checkbox" id="flower__adding1" name="flower__adding" onchange="changeCheckCheckBox(this, 1)">
-                  <label for="flower__adding1">Открытку ( +1 BYN)</label>                    
-                </li>
-                <li>
-                  <input type="checkbox" id="flower__adding2" name="flower__adding" onchange="changeCheckCheckBox(this, 3)">
-                  <label for="flower__adding2">Шоколадку ( +3 BYN)</label></li>
-                <li>          
-              </ul>
-            </div>    
-            <div class="param__transfer">
-              <h3>Доставка*</h3>    
-              <ul>
-                <li>                    
-                    <input type="radio" id="flower__transfer1" name="flower__transfer"  onchange="changeCheckRadio(this, 10)">
-                    <label for="flower__transfer1">Курьером ( +10 BYN)</label>                    
-                </li>
-                <li>
-                  <input type="radio" id="flower__transfer2" name="flower__transfer"  onchange="changeCheckRadio(this, 0)">
-                  <label for="flower__transfer2">Самовывоз</label></li> 
-                                
-              </ul>
-            </div> 
-            
+              </div>    
+              <div class="param__adding">
+                <h3>К букету добавить</h3>
+                <ul>
+                  <li>                    
+                    <input type="checkbox" id="flower__adding1" name="flower__adding" onchange="changeCheckCheckBox(this, 1)">
+                    <label for="flower__adding1">Открытку ( +1 BYN)</label>                    
+                  </li>
+                  <li>
+                    <input type="checkbox" id="flower__adding2" name="flower__adding" onchange="changeCheckCheckBox(this, 3)">
+                    <label for="flower__adding2">Шоколадку ( +3 BYN)</label></li>
+                  <li>          
+                </ul>
+              </div>    
+              <div class="param__transfer">
+                <h3>Доставка*</h3>    
+                <ul>
+                  <li>                    
+                      <input type="radio" id="flower__transfer1" name="flower__transfer"  onchange="changeCheckRadio(this, 10)">
+                      <label for="flower__transfer1">Курьером ( +10 BYN)</label>                    
+                  </li>
+                  <li>
+                    <input type="radio" id="flower__transfer2" name="flower__transfer"  onchange="changeCheckRadio(this, 0)">
+                    <label for="flower__transfer2">Самовывоз</label></li> 
+                                  
+                </ul>
+              </div>             
             
             <div class="param__transferDateTime">
               <div class="__date">
@@ -340,7 +339,8 @@
               
               <div class="__time">
                 <h3>Время доставки*</h3>             
-                <select id="timeTransfer" required>
+                <select id="timeTransfer" required>                  
+                  <option id="0"></option>
                   <option id="1">9:00-12:00</option>
                   <option id="2">12:00-15:00</option>
                   <option id="3">15:00-18:00</option>
@@ -379,6 +379,7 @@
               <input id="order" name="order" type="submit" value="Заказать"/>
               <input id="clear" type="button" value="Очистить" onclick="clearCheckedInput()"/>
             </div>
+            </div>  
           </form>
         </div>
 
